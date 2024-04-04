@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+    <div class="modal fade" tabindex="-1" id="modalDelete">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross"></em></a>
+                <div class="modal-body modal-body-lg text-center">
+                    <div class="nk-modal py-4">
+                        <em class="nk-modal-icon icon icon-circle icon-circle-xxl ni ni-cross bg-danger"></em>
+                        <h4 class="nk-modal-title">Êtes-vous sûr(e) ?</h4>
+                        <div class="nk-modal-text mt-n2">
+                            <p wicket:id="question" class="text-soft">Cette suppression est irréversible.</p>
+                        </div>
+                        <ul class="d-flex justify-content-center gx-4 mt-4">
+                            <li>
+                                <button wicket:id="confirm" data-bs-dismiss="modal" id="deleteEvent" class="btn btn-success">Oui, supprimer</button>
+                            </li>
+                            <li>
+                                <button data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#editEventPopup" class="btn btn-danger btn-dim">Cancel</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- .Delete Modal-content -->
+</wicket:panel>
+</body>
+</html>

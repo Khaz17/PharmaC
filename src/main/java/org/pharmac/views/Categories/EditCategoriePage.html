@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:extend>
+    <div class="nk-block-head nk-block-head-sm">
+        <div class="nk-block-between">
+            <div class="nk-block-head-content">
+                <h3 class="nk-block-title page-title fw-normal">Modifier une catégorie</h3>
+                <div class="nk-block-des text-soft">
+                    <p>Modifiez les informations d'une catégorie</p>
+                </div>
+            </div><!-- .nk-block-head-content -->
+        </div>
+    </div><!-- .nk-block-head -->
+    <div class="nk-block">
+        <div class="card card-bordered">
+            <div class="card-inner">
+                <form action="#" wicket:id="form">
+                    <div class="row gy-4">
+<!--                            <div class="col-md-6">-->
+<!--                                <div class="form-group">-->
+<!--                                    <label class="form-label" for="nomF">Sélectionner fournisseur</label><br>-->
+<!--                                    &lt;!&ndash;                                    <input type="text" class="form-control" wicket:id="nomF" id="nomF" placeholder="Nom du fournisseur" required>&ndash;&gt;-->
+<!--                                    <button type="button" class="btn btn-icon btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalDefault"><em class="icon ni ni-search"></em></button>-->
+<!--                                    <input type="hidden" wicket:id="idF" id="idF">-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash;                                <a href="#myModal" class="btn btn-icon btn-sm btn-primary" data-toggle="modal"><em class="icon ni ni-search"></em></a>&ndash;&gt;-->
+
+<!--                            </div>-->
+<!--                            <div class="col-md-6"></div>-->
+
+                        <input type="hidden" wicket:id="numCtg" id="numCtg">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="nomF">Libellé</label>
+                                <input type="text" class="form-control" wicket:id="libelleCtg" id="nomF" placeholder="Libellé de la catégorie" required>
+                            </div>
+                        </div><!-- .col -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="balance">Description</label>
+                                <input type="text" class="form-control" wicket:id="descriptionCtg" id="balance" placeholder="Description">
+                            </div>
+                        </div><!-- .col -->
+                        <div class="col-12">
+                            <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
+                                <li>
+                                    <button class="btn btn-primary" type="submit">Enregistrer</button>
+                                    <!--                                        <a href="#"  data-bs-dismiss="modal" class="btn btn-primary">Add Manufacturer</a>-->
+                                </li>
+                                <li>
+                                    <a href="#" data-bs-dismiss="modal" class="link link-light">Annuler</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--row-->
+                </form>
+
+            </div><!-- .card-inner-group -->
+        </div><!-- .card -->
+    </div><!-- .nk-block -->
+</wicket:extend>
+</body>
+</html>

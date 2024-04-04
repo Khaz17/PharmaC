@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:extend>
+    <div class="nk-block-head nk-block-head-sm">
+        <div class="nk-block-between">
+            <div class="nk-block-head-content">
+                <h3 class="nk-block-title page-title fw-normal">Modifier un fournisseur</h3>
+                <div class="nk-block-des text-soft">
+                    <p>Modifiez les informations d'un fournisseur</p>
+                </div>
+            </div><!-- .nk-block-head-content -->
+<!--            <div class="nk-block-head-content">-->
+<!--                <a data-bs-toggle="modal" href="#addManufacture" class="btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>-->
+<!--                <a data-bs-toggle="modal" href="#addManufacture" class="btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span>Ajouter fournisseur</span></a>-->
+<!--            </div>&lt;!&ndash; .nk-block-head-content &ndash;&gt;-->
+        </div><!-- .nk-block-between -->
+    </div><!-- .nk-block-head -->
+    <div class="nk-block">
+        <div class="card card-bordered">
+            <div class="card-inner">
+                <div wicket:id="containerFournisseur">
+                    <form action="#" wicket:id="form">
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="nomF">Sélectionner fournisseur</label><br>
+<!--                                    <input type="text" class="form-control" wicket:id="nomF" id="nomF" placeholder="Nom du fournisseur" required>-->
+                                    <button type="button" class="btn btn-icon btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalDefault"><em class="icon ni ni-search"></em></button>
+                                    <input type="hidden" wicket:id="idF" id="idF">
+                                </div>
+<!--                                <a href="#myModal" class="btn btn-icon btn-sm btn-primary" data-toggle="modal"><em class="icon ni ni-search"></em></a>-->
+
+                            </div>
+                            <div class="col-md-6"></div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="nomF">Nom</label>
+                                    <input type="text" class="form-control" wicket:id="nomF" id="nomF" placeholder="Nom du fournisseur" required>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="mail">Email</label>
+                                    <input type="text" class="form-control" wicket:id="emailF" id="mail" placeholder="Email">
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="phone">Téléphone</label>
+                                    <input type="text" class="form-control" wicket:id="telF" id="phone" placeholder="Phone no">
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="balance">Adresse</label>
+                                    <input type="text" class="form-control" wicket:id="adresseF" id="balance" placeholder="Balance" required>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-12">
+                                <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
+                                    <li>
+                                        <button class="btn btn-primary" type="submit">Enregistrer</button>
+                                        <!--                                        <a href="#"  data-bs-dismiss="modal" class="btn btn-primary">Add Manufacturer</a>-->
+                                    </li>
+                                    <li>
+                                        <a href="#" data-bs-dismiss="modal" class="link link-light">Cancel</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--row-->
+                    </form>
+                </div>
+
+            </div><!-- .card-inner-group -->
+
+            <div wicket:id="fournisseurpanel"></div>
+        </div><!-- .card -->
+    </div><!-- .nk-block -->
+</wicket:extend>
+</body>
+</html>

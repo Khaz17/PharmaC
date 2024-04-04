@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+
+    <div class="modal fade" tabindex="-1" id="modalDefault">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+<!--                <a href="#" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                    <em class="icon ni ni-cross"></em>-->
+<!--                </a>-->
+                <div class="modal-header">
+                    <h5 class="modal-title">Fournisseurs</h5>
+                    <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <em class="icon ni ni-cross"></em>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-sm table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Téléphone</th>
+                            <th scope="col">Adresse</th>
+                        </tr>
+                        </thead>
+                        <tbody wicket:id="fournisseurs-list">
+                        <tr>
+                            <th wicket:id="id">1</th>
+                            <td wicket:id="nom">Mark</td>
+                            <td wicket:id="email">Otto</td>
+                            <td wicket:id="telephone">@mdo</td>
+                            <td wicket:id="adresse">rt</td>
+                            <!--                <td wicket:id="c"></td>-->
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</wicket:panel>
+</body>
+</html>
