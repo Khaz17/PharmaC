@@ -1,4 +1,4 @@
-package org.pharmac.views.EditFournisseurPage;
+package org.pharmac.views.Fournisseurs;
 
 import org.apache.wicket.ajax.AjaxEventBehavior;
 import org.apache.wicket.ajax.AjaxRequestTarget;

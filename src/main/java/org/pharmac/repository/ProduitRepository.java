@@ -1,4 +1,7 @@
 package org.pharmac.repository;
 
-public interface ProduitRepository {
+import org.pharmac.models.Produit;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProduitRepository extends JpaRepository<Produit, Long> {
 }

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!doctype html>
+<html class="no-js" lang="zxx" xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>PharmaC - Liste des produits</title>
+
+</head>
+
+<body>
+<wicket:extend>
+
+    <div class="nk-block-head nk-block-head-sm">
+        <div class="nk-block-between">
+            <div class="nk-block-head-content">
+                <h3 class="nk-block-title page-title fw-normal">Produits</h3>
+                <div class="nk-block-des text-soft">
+                    <p>Voici la liste des produits que vous avez enregistrés</p>
+                </div>
+            </div><!-- .nk-block-head-content -->
+        </div><!-- .nk-block-between -->
+    </div><!-- .nk-block-head -->
+    <div class="nk-block-head nk-block-head-sm">
+        <div class="nk-block-between">
+            <div class="nk-block-head-content">
+<!--                <h3 class="nk-block-title page-title">Medicine</h3>-->
+<!--                <div class="nk-block-des text-soft">-->
+<!--                    <p>Here is the medicine list.</p>-->
+<!--                </div>-->
+            </div><!-- .nk-block-head-content -->
+            <div class="nk-block-head-content">
+                <div class="toggle-wrap nk-block-tools-toggle">
+                    <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
+                    <div class="toggle-expand-content" data-content="pageMenu">
+                        <ul class="nk-block-tools g-3">
+                            <li>
+                                <div class="form-control-wrap">
+                                    <div class="form-icon form-icon-right">
+                                        <em class="icon ni ni-search"></em>
+                                    </div>
+                                    <input type="text" class="form-control" id="default-04" placeholder="Quick search by name">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="drodown">
+                                    <a href="#" class="dropdown-toggle btn btn-white btn-dim btn-outline-light" data-bs-toggle="dropdown"><em class="d-none d-sm-inline icon ni ni-filter-alt"></em><span><span class="d-none d-md-inline"></span>Filtered By</span><em class="dd-indc icon ni ni-chevron-right"></em></a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <ul class="link-list-opt no-bdr">
+                                            <li><a href="#"><span>Alphabetically, A-Z</span></a></li>
+                                            <li><a href="#"><span>Alphabetically, Z-A</span></a></li>
+                                            <li><a href="#"><span>Best Selling</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nk-block-tools-opt">
+                                <a href="/ajouter-produit" class="btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
+                                <a href="/ajouter-produit" class="btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span>Add Medicine</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- .nk-block-head-content -->
+        </div><!-- .nk-block-between -->
+    </div><!-- .nk-block-head -->
+    <div class="nk-block">
+        <div class="card card-bordered card-preview">
+            <div class="card-inner">
+                <table class="datatable-init nk-tb-list nk-tb-ulist" data-auto-responsive="false">
+                    <thead>
+                    <tr class="nk-tb-item nk-tb-head">
+                        <th class="nk-tb-col nk-tb-col-check">
+                            <div class="custom-control custom-control-sm custom-checkbox notext">
+                                <input type="checkbox" class="custom-control-input" id="uid">
+                                <label class="custom-control-label" for="uid"></label>
+                            </div>
+                        </th>
+                        <th class="nk-tb-col"><span class="sub-text">Nom commercial</span></th>
+                        <th class="nk-tb-col tb-col-mb"><span class="sub-text">DCI</span></th>
+                        <th class="nk-tb-col tb-col-md"><span class="sub-text">Catégorie</span></th>
+<!--                        <th class="nk-tb-col tb-col-lg"><span class="sub-text">Verified</span></th>-->
+<!--                        <th class="nk-tb-col tb-col-lg"><span class="sub-text">Last Login</span></th>-->
+<!--                        <th class="nk-tb-col tb-col-md"><span class="sub-text">Status</span></th>-->
+                        <th class="nk-tb-col nk-tb-col-tools text-end">
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody wicket:id="produits-list">
+                    <tr class="nk-tb-item">
+                        <td class="nk-tb-col nk-tb-col-check">
+                            <div class="custom-control custom-control-sm custom-checkbox notext">
+                                <input type="checkbox" class="custom-control-input" id="uid1">
+                                <label class="custom-control-label" for="uid1"></label>
+                            </div>
+                        </td>
+                        <td class="nk-tb-col">
+<!--                            <div class="user-card">-->
+<!--                                <div class="user-avatar bg-dim-primary d-none d-sm-flex">-->
+<!--                                    <span>AB</span>-->
+<!--                                </div>-->
+<!--                                <div class="user-info">-->
+<!--                                    <span class="tb-lead">Abu Bin Ishtiyak <span class="dot dot-success d-md-none ms-1"></span></span>-->
+<!--                                    <span>info@softnio.com</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <a href="#">
+                                <span class="tb-product">
+                                    <span class="title" wicket:id="nomCommercial">Oxidon</span>
+                                </span>
+                            </a>
+                        </td>
+                        <td class="nk-tb-col tb-col-mb">
+                            <span wicket:id="dci">Domperidon</span>
+                        </td>
+                        <td class="nk-tb-col tb-col-md">
+                            <span wicket:id="categorie">Tablet</span>
+                        </td>
+<!--                        <td class="nk-tb-col tb-col-lg" data-order="Email Verified - Kyc Unverified">-->
+<!--                            <ul class="list-status">-->
+<!--                                <li><em class="icon text-success ni ni-check-circle"></em> <span>Email</span></li>-->
+<!--                                <li><em class="icon ni ni-alert-circle"></em> <span>KYC</span></li>-->
+<!--                            </ul>-->
+<!--                        </td>-->
+<!--                        <td class="nk-tb-col tb-col-lg">-->
+<!--                            <span>05 Oct 2019</span>-->
+<!--                        </td>-->
+<!--                        <td class="nk-tb-col tb-col-md">-->
+<!--                            <span class="tb-status text-success">Active</span>-->
+<!--                        </td>-->
+                        <td class="nk-tb-col nk-tb-col-tools">
+<!--                            <ul class="nk-tb-actions gx-1">-->
+<!--                                <li class="nk-tb-action-hidden">-->
+<!--                                    <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Wallet">-->
+<!--                                        <em class="icon ni ni-wallet-fill"></em>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li class="nk-tb-action-hidden">-->
+<!--                                    <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email">-->
+<!--                                        <em class="icon ni ni-mail-fill"></em>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li class="nk-tb-action-hidden">-->
+<!--                                    <a href="#" class="btn btn-trigger btn-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Suspend">-->
+<!--                                        <em class="icon ni ni-user-cross-fill"></em>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <div class="drodown">-->
+<!--                                        <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>-->
+<!--                                        <div class="dropdown-menu dropdown-menu-end">-->
+<!--                                            <ul class="link-list-opt no-bdr">-->
+<!--                                                <li><a href="#"><em class="icon ni ni-focus"></em><span>Quick View</span></a></li>-->
+<!--                                                <li><a href="#"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>-->
+<!--                                                <li><a href="#"><em class="icon ni ni-repeat"></em><span>Transaction</span></a></li>-->
+<!--                                                <li><a href="#"><em class="icon ni ni-activity-round"></em><span>Activities</span></a></li>-->
+<!--                                                <li class="divider"></li>-->
+<!--                                                <li><a href="#"><em class="icon ni ni-shield-star"></em><span>Reset Pass</span></a></li>-->
+<!--                                                <li><a href="#"><em class="icon ni ni-shield-off"></em><span>Reset 2FA</span></a></li>-->
+<!--                                                <li><a href="#"><em class="icon ni ni-na"></em><span>Suspend User</span></a></li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+                            <ul class="nk-tb-actions gx-1 my-n1">
+                                <li class="me-n1">
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <ul class="link-list-opt no-bdr">
+                                                <li><a href="html/pharmacy/manufacturer.html"><em class="icon ni ni-home-fill"></em><span>Manufacturer</span></a></li>
+                                                <li><a href="html/pharmacy/medicine-details.html"><em class="icon ni ni-eye"></em><span>View Details</span></a></li>
+                                                <li><a wicket:id="edit-produit" href="#"><em class="icon ni ni-edit"></em><span>Edit </span></a></li>
+                                                <li><a data-bs-toggle="modal" href="#modalDelete"><em class="icon ni ni-trash"></em><span>Remove </span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr><!-- .nk-tb-item  -->
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- .card-preview -->
+    </div><!-- .nk-block -->
+    <div class="nk-add-product toggle-slide toggle-slide-right" data-content="addProduct" data-toggle-screen="any" data-toggle-overlay="true" data-toggle-body="true" data-simplebar>
+        <div class="nk-block-head">
+            <div class="nk-block-head-content">
+                <h5 class="nk-block-title">New Product</h5>
+                <div class="nk-block-des">
+                    <p>Add information and add new product.</p>
+                </div>
+            </div>
+        </div><!-- .nk-block-head -->
+        <div class="nk-block">
+            <div class="row g-3">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label class="form-label" for="product-title">Product Title</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="product-title">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-mb-6">
+                    <div class="form-group">
+                        <label class="form-label" for="regular-price">Regular Price</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="regular-price">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-mb-6">
+                    <div class="form-group">
+                        <label class="form-label" for="sale-price">Sale Price</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="sale-price">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-mb-6">
+                    <div class="form-group">
+                        <label class="form-label" for="stock">Stock</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="stock">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-mb-6">
+                    <div class="form-group">
+                        <label class="form-label" for="SKU">SKU</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="SKU">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label class="form-label" for="category">Category</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="category">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label class="form-label" for="tags">Tags</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="tags">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="upload-zone small bg-lighter my-2">
+                        <div class="dz-message">
+                            <span class="dz-message-text">Drag and drop file</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary"><em class="icon ni ni-plus"></em><span>Add New</span></button>
+                </div>
+            </div>
+        </div><!-- .nk-block -->
+    </div>
+
+    <script src="/js/libs/datatable-btns.js?ver=3.2.2"></script>
+
+</wicket:extend>
+</body>
+
+</html>

@@ -14,7 +14,6 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.pharmac.models.Fournisseur;
 import org.pharmac.services.FournisseurService;
-import org.pharmac.views.EditFournisseurPage.EditFournisseurPage;
 import org.pharmac.views.components.BasePage;
 import org.pharmac.views.components.ConfirmDeletePage;
 import org.wicketstuff.annotation.mount.MountPath;

@@ -8,6 +8,5 @@ import org.wicketstuff.annotation.mount.MountPath;
 @WicketHomePage @MountPath("accueil")
 public class HomePage extends BasePage {
 	public HomePage() {
-		add(new TitlePanel("title", "Accueil", "Bienvenue dans votre application de vente de produits d'officine pharmaceutique"));
 	}
 }
