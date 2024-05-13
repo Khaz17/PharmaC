@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:extend>
+    <div class="nk-block-head nk-block-head-sm">
+        <div class="nk-block-between">
+            <div class="nk-block-head-content">
+                <h3 class="nk-block-title page-title fw-normal">Nouvelle vente</h3>
+                <div class="nk-block-des text-soft">
+                    <p>Saisir les produits achetés et les quantités</p>
+                </div>
+            </div><!-- .nk-block-head-content -->
+        </div><!-- .nk-block-between -->
+    </div><!-- .nk-block-head -->
+<!--    <div wicket:id="feedbackPanel"></div>-->
+    <div class="nk-block" wicket:id="venteContainer">
+<!--        <form wicket:id="form">-->
+<!--            <div class="card card-bordered">-->
+<!--                <div class="card-inner">-->
+
+<!--&lt;!&ndash;                    <label class="form-label"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <input type="text" wicket:id="vente.nomClient" class="form-control"/>&ndash;&gt;-->
+
+<!--                    <div class="row g-3 align-center">-->
+<!--                        <div class="col-lg-5">-->
+<!--                            <div class="form-group">-->
+<!--                                <label class="form-label" for="site-name">Client</label>-->
+<!--&lt;!&ndash;                                <span class="form-note">Specify the name of your website.</span>&ndash;&gt;-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-7">-->
+<!--                            <div class="form-group">-->
+<!--                                <div class="form-control-wrap">-->
+<!--                                    <input type="text" wicket:id="vente.nomClient" class="form-control" id="vente.nomClient" value="Nom du client">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div wicket:id="detailContainer">-->
+<!--                        <table class="table row mb-0 table-retrieve">-->
+<!--                            <tbody>-->
+<!--                                <tr class="col-md-12 gy-4" wicket:id="detailVenteList">-->
+<!--                                    <td class="col-md-7">-->
+<!--&lt;!&ndash;                                        <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <label class="form-label" for="name">Produit</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <input wicket:id="produitAVendre" type="text" class="form-control" id="name" placeholder="Medicine Name" required>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="form-label">Produit</label><br>-->
+<!--                                            <div class="form-control-wrap">-->
+<!--                                                <div class="input-group">-->
+<!--                                                    <input type="text" wicket:id="produit-name" class="form-control" placeholder="Produit à restocker">-->
+<!--                                                    <div class="input-group-append">-->
+<!--                                                        <button type="button" data-bs-toggle="modal" data-bs-target="#modalDefault" class="btn btn-outline-primary btn-dim">Sélectionner</button>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </td>-->
+<!--                                    <td class="col-md-3">-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="form-label" for="generic">Prix unitaire</label>-->
+<!--                                            <input wicket:id="prixUnitaire" type="number" class="form-control" id="generic" placeholder="Generic Name">-->
+<!--                                        </div>-->
+<!--                                    </td>-->
+<!--                                    <td class="col-md-2">-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="form-label" for="sKU">Quantité</label>-->
+<!--                                            <input wicket:id="quantiteVendue" type="number" class="form-control" id="sKU" placeholder="SKU">-->
+<!--                                        </div>-->
+<!--                                    </td>-->
+<!--                                    <td class="d-flex align-items-center">-->
+<!--                                        <a wicket:id="removeLink" href="#" class="btn btn-icon btn-primary"><em class="icon ni ni-minus"></em></a>-->
+<!--                                    </td>-->
+
+<!--                                    <div wicket:id="produitspanel"></div>-->
+<!--                                </tr>-->
+
+<!--                            </tbody>-->
+
+<!--                        </table>-->
+
+
+<!--                        <a wicket:id="addLink" href="#" class="btn btn-icon btn-primary"><em class="icon ni ni-plus"></em></a>-->
+<!--                        <br><br>-->
+
+<!--                        &lt;!&ndash;                        <div class="col-xxl-3 col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <label class="form-label" for="name">Produit</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <input wicket:id="" type="text" class="form-control" id="name" placeholder="Medicine Name" required>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&lt;!&ndash;col&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="col-xxl-3 col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <label class="form-label" for="generic">Prix unitaire</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <input wicket:id="prixUnitaire" type="number" class="form-control" id="generic" placeholder="Generic Name">&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&lt;!&ndash;col&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="col-xxl-3 col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <label class="form-label" for="sKU">Quantité</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <input wicket:id="quantiteVendue" type="number" class="form-control" id="sKU" placeholder="SKU">&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&lt;!&ndash;col&ndash;&gt;&ndash;&gt;-->
+
+<!--                    </div>&lt;!&ndash;row&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="col-12">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <button wicket:id="submit" class="btn btn-primary">Enregistrer vente</button>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&lt;!&ndash;col&ndash;&gt;&ndash;&gt;-->
+
+<!--                    <div class="col-12">-->
+<!--                        <div class="form-group">-->
+<!--                            <button wicket:id="submit-link" class="btn btn-primary">Enregistrer vente</button>-->
+<!--                        </div>-->
+<!--                    </div>&lt;!&ndash;col&ndash;&gt;-->
+
+<!--                </div>&lt;!&ndash; .card-inner-group &ndash;&gt;-->
+
+<!--            </div>&lt;!&ndash; .card &ndash;&gt;-->
+<!--        </form>-->
+        <div wicket:id="panel"></div>
+
+    </div><!-- .nk-block -->
+</wicket:extend>
+</body>
+</html>

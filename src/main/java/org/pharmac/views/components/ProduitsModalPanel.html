@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+    <div class="modal fade" tabindex="-1" id="modalDefault">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Produits</h5>
+                    <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <em class="icon ni ni-cross"></em>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-sm table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">DCI</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Voie adm.</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr wicket:id="produits-list">
+                            <th wicket:id="id">1</th>
+                            <td wicket:id="nomCommercial">Mark</td>
+                            <td wicket:id="dci">Otto</td>
+                            <td wicket:id="prixUnitaire">@mdo</td>
+                            <td wicket:id="voieAdministration">rt</td>
+                            <td><a href="#" wicket:id="select-produit">Choisir</a></td>
+                            <!--                <td wicket:id="c"></td>-->
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    <script>-->
+<!--        document.querySelector('.modal-body').addEventListener('click', function() {-->
+<!--            document.getElementById('modalDefault').style.display = 'none';-->
+<!--        });-->
+<!--    </script>-->
+</wicket:panel>
+</body>
+</html>

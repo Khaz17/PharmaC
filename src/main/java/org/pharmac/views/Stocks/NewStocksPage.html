@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:extend>
+    <div class="nk-block-head nk-block-head-sm">
+        <div class="nk-block-between">
+            <div class="nk-block-head-content">
+                <h3 class="nk-block-title page-title fw-normal">Stockage</h3>
+                <div class="nk-block-des text-soft">
+                    <p>Sélectionnez un produit et ajouter de nouveaux stocks</p>
+                </div>
+            </div><!-- .nk-block-head-content -->
+        </div><!-- .nk-block-between -->
+    </div><!-- .nk-block-head -->
+    <div class="nk-block">
+        <div class="card card-bordered">
+            <div class="card-inner">
+                <div wicket:id="stocksContainer">
+                    <div wicket:id="feedback"></div>
+                    <form action="#" wicket:id="form">
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Produit</label><br>
+                                    <div class="form-control-wrap">
+                                        <div class="input-group">
+                                            <input type="text" wicket:id="produit-name" class="form-control" placeholder="Produit à restocker">
+                                            <div class="input-group-append">
+                                                <button type="button" data-bs-toggle="modal" data-bs-target="#modalDefault" class="btn btn-outline-primary btn-dim">Sélectionner</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+<!--                                <div class="form-control-wrap">-->
+<!--                                    <div class="input-group">-->
+<!--                                        <label class="form-label">Produit</label><br>-->
+<!--                                        <input type="text" class="form-control" placeholder="Produit à restocker">-->
+<!--                                        <div class="input-group-append">-->
+<!--                                            <button data-bs-toggle="modal" data-bs-target="#modalDefault" class="btn btn-outline-primary btn-dim">Sélectionner</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Fournisseur</label>
+                                    <div class="form-control-wrap">
+                                        <select wicket:id="fournisseur" class="form-select js-select2">
+                                            <option value="default_option">Choisir</option>
+                                            <option value="option_select_category">Syrup</option>
+                                            <option value="option_select_category">Vitamin</option>
+                                            <option value="option_select_category">Inhealer</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Date de péremption</label>
+                                    <div class="form-control-wrap">
+                                        <input type="date" wicket:id="datePeremption" class="form-control" placeholder="dd-mm-yyyy">
+                                    </div>
+                                </div>
+                            </div><!--col-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="quantiteStk">Quantité</label>
+                                    <div class="form-control-wrap number-spinner-wrap">
+                                        <button type="button" class="btn btn-icon btn-outline-light number-spinner-btn number-minus" data-number="minus"><em class="icon ni ni-minus"></em></button>
+                                        <input type="number" wicket:id="quantiteStk" class="form-control number-spinner" value="0">
+                                        <button type="button" class="btn btn-icon btn-outline-light number-spinner-btn number-plus" data-number="plus"><em class="icon ni ni-plus"></em></button>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-12">
+                                <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
+                                    <li>
+                                        <button class="btn btn-primary" wicket:id="submit-stock" type="submit">Enregistrer</button>
+                                        <!--                                        <a href="#"  data-bs-dismiss="modal" class="btn btn-primary">Add Manufacturer</a>-->
+                                    </li>
+                                    <li>
+                                        <button type="reset" class="link link-light">Cancel</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--row-->
+                    </form>
+                </div>
+
+            </div><!-- .card-inner-group -->
+
+            <div wicket:id="produitspanel"></div>
+        </div><!-- .card -->
+    </div><!-- .nk-block -->
+</wicket:extend>
+</body>
+</html>

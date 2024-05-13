@@ -16,6 +16,11 @@ public class Produit implements Serializable {
 
 	private String dci;
 
+	private String voieAdministration;
+
+	@Column(nullable = false)
+	private double prixUnitaire;
+
 	private String descriptionP;
 
 	@ManyToOne

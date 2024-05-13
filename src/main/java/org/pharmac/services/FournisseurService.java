@@ -21,6 +21,10 @@ public class FournisseurService {
 		return repository.findAll();
 	}
 
+//	public List<Fournisseur> getProduitFournisseurs(Long id) {
+//		return repository.findFournisseursByProduit(id);
+//	}
+
 	public Fournisseur createOrUpdateFournisseur(Fournisseur fournisseur) {
 		return repository.save(fournisseur);
 	}

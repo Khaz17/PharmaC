@@ -9,11 +9,14 @@ import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.apache.wicket.util.string.StringValue;
 import org.pharmac.models.Categorie;
 import org.pharmac.models.Fournisseur;
+import org.pharmac.models.Produit;
 import org.pharmac.services.CategorieService;
 import org.pharmac.services.FournisseurService;
+import org.pharmac.services.ProduitService;
 import org.pharmac.views.Categories.CategoriesPage;
 import org.pharmac.views.Fournisseurs.FournisseursPage;
 import org.pharmac.views.Home.HomePage;
+import org.pharmac.views.Produits.ProduitsPage;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -27,8 +30,12 @@ public class ConfirmDeletePage extends WebPage {
 	@SpringBean
 	private CategorieService categorieService;
 
+	@SpringBean
+	private ProduitService produitService;
+
 	private transient Optional<Fournisseur> fournisseurToDelete;
 	private transient Optional<Categorie> categorieToDelete;
+	private transient Optional<Produit> produitToDelete;
 	private WebPage next;
 
 	public ConfirmDeletePage(PageParameters parameters) {
@@ -43,8 +50,9 @@ public class ConfirmDeletePage extends WebPage {
 
 		fournisseurToDelete = fournisseurService.getFournisseur(Long.parseLong(elementId));
 		categorieToDelete = categorieService.getCategorie(Long.parseLong(elementId));
+		produitToDelete = produitService.getProduit(Long.parseLong(elementId));
 
-		if (fournisseurToDelete.isPresent() || categorieToDelete.isPresent()){
+		if (fournisseurToDelete.isPresent() || categorieToDelete.isPresent() || produitToDelete.isPresent()){
 			add(new Label("elementType", elementType.toLowerCase()));
 			add(new Label("elementId", elementId));
 			add(new Link<Void>("confirm") {
@@ -63,6 +71,9 @@ public class ConfirmDeletePage extends WebPage {
 						} else if (elementType.equals("Categorie")) {
 							objet = categorieService;
 							next = new CategoriesPage();
+						} else if (elementType.equals("Produit")) {
+							objet = produitService;
+							next = new ProduitsPage();
 						}
 						Object[] parametres = {Long.parseLong(elementId)};
 						Object resultat = methode.invoke(objet, parametres);
@@ -105,6 +116,16 @@ public class ConfirmDeletePage extends WebPage {
 		Optional<Categorie> categorieToDelete = categorieService.getCategorie(categorieToDeleteId);
 		if (categorieToDelete.isPresent()) {
 			categorieService.removeCategorie(categorieToDelete.get().getNumCtg());
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	private boolean deleteProduit(Long produitToDeleteId) {
+		Optional<Produit> produitToDelete = produitService.getProduit(produitToDeleteId);
+		if (produitToDelete.isPresent()) {
+			produitService.removeProduit(produitToDelete.get().getCodeP());
 			return true;
 		} else {
 			return false;

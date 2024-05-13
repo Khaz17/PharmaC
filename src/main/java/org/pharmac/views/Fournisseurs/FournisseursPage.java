@@ -44,6 +44,7 @@ public class FournisseursPage extends BasePage {
 			protected void onSubmit() {
 				fournisseurService.createOrUpdateFournisseur(fournisseur);
 				setModelObject(new Fournisseur());
+				setResponsePage(FournisseursPage.class);
 			}
 		};
 

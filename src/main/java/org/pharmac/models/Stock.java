@@ -4,8 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 @Entity
@@ -13,18 +13,10 @@ public class Stock implements Serializable {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idStk;
 
-	@Column(nullable = false)
-	private String dosage;
-
-	private LocalDate datePeremption;
+	private Date datePeremption;
 
 	@Column(nullable = false)
 	private int quantiteStk;
-
-	private String voieAdministration;
-
-	@Column(nullable = false)
-	private double prixUnitaire;
 
 	private LocalDateTime dateAjout;
 

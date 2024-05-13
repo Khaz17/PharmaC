@@ -6,9 +6,11 @@ import org.pharmac.views.Categories.CategoriesPage;
 import org.pharmac.views.Fournisseurs.EditFournisseurPage;
 import org.pharmac.views.Fournisseurs.FournisseursPage;
 import org.pharmac.views.Home.HomePage;
-import org.pharmac.views.Produits.AddProduitPage;
-import org.pharmac.views.Produits.DetailsProduitPage;
+import org.pharmac.views.Produits.AddOrEditProduitPage;
 import org.pharmac.views.Produits.ProduitsPage;
+import org.pharmac.views.Stocks.NewStocksPage;
+import org.pharmac.views.Ventes.NewVentePage;
+import org.pharmac.views.Ventes.VentesPage;
 
 public class SideBarPanel extends Panel {
 	public SideBarPanel(String id) {
@@ -23,7 +25,7 @@ public class SideBarPanel extends Panel {
 		add(new Link<Void>("newproduct-page") {
 			@Override
 			public void onClick() {
-				setResponsePage(AddProduitPage.class);
+				setResponsePage(AddOrEditProduitPage.class);
 			}
 		});
 
@@ -34,12 +36,12 @@ public class SideBarPanel extends Panel {
 			}
 		});
 
-		add(new Link<Void>("details-page") {
-			@Override
-			public void onClick() {
-				setResponsePage(DetailsProduitPage.class);
-			}
-		});
+//		add(new Link<Void>("details-page") {
+//			@Override
+//			public void onClick() {
+//				setResponsePage(DetailsProduitPage.class);
+//			}
+//		});
 
 		add(new Link<Void>("fournisseurs-page") {
 			@Override
@@ -59,6 +61,27 @@ public class SideBarPanel extends Panel {
 			@Override
 			public void onClick() {
 				setResponsePage(CategoriesPage.class);
+			}
+		});
+
+		add(new Link<Void>("stocks-page") {
+			@Override
+			public void onClick() {
+				setResponsePage(NewStocksPage.class);
+			}
+		});
+
+		add(new Link<Void>("newvente-page") {
+			@Override
+			public void onClick() {
+				setResponsePage(NewVentePage.class);
+			}
+		});
+
+		add(new Link<Void>("ventes-page") {
+			@Override
+			public void onClick() {
+				setResponsePage(VentesPage.class);
 			}
 		});
 	}

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>PharmaC - Nouveau produit</title>
+</head>
+<body>
+<wicket:extend>
+    <!--==============================
+    Title
+    ============================== -->
+    <div class="nk-block-head nk-block-head-sm">
+        <div class="nk-block-between">
+            <div class="nk-block-head-content">
+                <h3 class="nk-block-title page-title fw-normal">Informations du produit</h3>
+                <div class="nk-block-des text-soft">
+                    <p>Renseignez les champs avec les informations relatives au produit</p>
+                </div>
+            </div><!-- .nk-block-head-content -->
+        </div><!-- .nk-block-between -->
+    </div><!-- .nk-block-head -->
+    <div class="nk-block">
+        <div class="card card-bordered">
+            <div class="card-inner-group">
+                <div class="card-inner">
+                    <form action="#" wicket:id="produit-form">
+                        <div class="row g-3 align-center">
+                            <div class="col-xxl-3 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="nomCommercial">Nom commercial</label>
+                                    <input type="text" class="form-control" wicket:id="nomCommercial" id="nomCommercial" placeholder="Nom commercial du produit" required>
+                                </div>
+                            </div><!--col-->
+                            <div class="col-xxl-3 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="dci">DCI</label>
+                                    <input type="text" class="form-control" wicket:id="dci" id="dci" placeholder="Dénomination commune internationale du produit">
+                                </div>
+                            </div><!--col-->
+
+                            <div class="col-xxl-3 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Prix unitaire</label>
+                                    <div class="form-control-wrap number-spinner-wrap">
+                                        <button type="button" class="btn btn-icon btn-outline-light number-spinner-btn number-minus" data-number="minus"><em class="icon ni ni-minus"></em></button>
+                                        <input type="number" wicket:id="prixUnitaire" class="form-control number-spinner" placeholder="number" value="20" step="5">
+                                        <button type="button" class="btn btn-icon btn-outline-light number-spinner-btn number-plus" data-number="plus"><em class="icon ni ni-plus"></em></button>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-xxl-3 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="voieAdministration">Voie d'administration</label>
+                                    <div class="form-control-wrap">
+                                        <input type="text" wicket:id="voieAdministration" id="voieAdministration" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-xxl-3 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Catégorie</label>
+                                    <div class="form-control-wrap">
+                                        <select wicket:id="categorieP" class="form-select js-select2">
+                                            <option value="default_option">Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!--col-->
+                            <div class="col-xxl-3 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="descriptionP">Description</label>
+                                    <input type="text" class="form-control" wicket:id="descriptionP" id="descriptionP" placeholder="Décrivez en quelques mots le produit">
+                                </div>
+                            </div><!--col-->
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <button type="submit" wicket:id="submit-produit" class="btn btn-primary">Ajouter produit</button>
+                                </div>
+                            </div><!--col-->
+                        </div><!--row-->
+                    </form>
+
+                </div>
+                <div class="card-inner" wicket:id="produitContainer">
+                    <div class="nk-block-between">
+                        <div class="nk-block-head-content">
+                            <h5 class="title nk-block-title">Stockage</h5>
+                            <p>Stocks du produit</p>
+                        </div>
+                        <div class="nk-block-head-content">
+                            <a class="btn btn-icon btn-primary" data-bs-toggle="modal" href="#addStock">
+                                <em class="icon ni ni-plus"></em>
+                            </a>
+                        </div><!-- .nk-block-head-content -->
+                        <div class="nk-block">
+                            <div class="card card-bordered card-preview">
+                                <div class="card-inner">
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Date péremptoire</th>
+                                                <th scope="col">Quantité</th>
+                                                <th scope="col">Date d'ajout</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr wicket:id="stocks-list">
+                                                <td wicket:id="datePeremption">Mark</td>
+                                                <td wicket:id="quantiteStk" >Otto</td>
+                                                <td wicket:id="dateAjout">@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-block">
+
+                    </div>
+                </div>
+            </div><!-- .card-inner-group -->
+            <div class="modal fade" tabindex="-1" role="dialog" id="addStock">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
+                        <div class="modal-body modal-body-md" wicket:id="container">
+                            <div wicket:id="feedback"></div>
+                            <h5 class="modal-title">Ajouter stock</h5>
+                            <form action="#" wicket:id="stock-form" class="mt-4">
+                                <div class="row g-gs">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Fournisseur</label>
+                                            <div class="form-control-wrap">
+                                                <select wicket:id="fournisseur" class="form-select js-select2">
+                                                    <option value="default_option">Choisir</option>
+                                                     <option value="option_select_category">Syrup</option>
+                                                    <option value="option_select_category">Vitamin</option>
+                                                    <option value="option_select_category">Inhealer</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Date de péremption</label>
+                                            <div class="form-control-wrap">
+                                                <input type="date" wicket:id="datePeremption" class="form-control" placeholder="dd-mm-yyyy">
+                                            </div>
+                                        </div>
+                                    </div><!--col-->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label" for="quantiteStk">Quantité</label>
+                                            <div class="form-control-wrap number-spinner-wrap">
+                                                <button type="button" class="btn btn-icon btn-outline-light number-spinner-btn number-minus" data-number="minus"><em class="icon ni ni-minus"></em></button>
+                                                <input type="number" wicket:id="quantiteStk" class="form-control number-spinner" value="0">
+                                                <button type="button" class="btn btn-icon btn-outline-light number-spinner-btn number-plus" data-number="plus"><em class="icon ni ni-plus"></em></button>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                    <div class="col-12">
+                                        <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
+                                            <li>
+                                                <button wicket:id="submit-stock" class="btn btn-primary" type="submit">Enregistrer</button>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-bs-dismiss="modal" class="link link-light">Cancel</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </div><!-- .modal-body -->
+                    </div><!-- .modal-content -->
+                </div><!-- .modal-dialog -->
+            </div><!-- .modal -->
+        </div><!-- .card -->
+    </div><!-- .nk-block -->
+
+</wicket:extend>
+</body>
+</html>

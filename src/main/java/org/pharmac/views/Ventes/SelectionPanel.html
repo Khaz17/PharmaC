@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+    <div class="nk-tb-list">
+        <div class="nk-tb-item nk-tb-head">
+<!--            <div class="nk-tb-col nk-tb-col-check">-->
+<!--            </div>-->
+            <div class="nk-tb-col tb-col-sm"><span>Nom</span></div>
+            <div class="nk-tb-col"><span>Date péremptoire</span></div>
+            <div class="nk-tb-col"><span>Prix</span></div>
+            <div class="nk-tb-col"><span>Stock</span></div>
+            <div class="nk-tb-col"><span>Catégorie</span></div>
+            <div class="nk-tb-col tb-col-md"><span></span></div>
+        </div><!-- .nk-tb-item -->
+        <div class="nk-tb-item" wicket:id="listView">
+<!--            <div class="nk-tb-col nk-tb-col-check">-->
+<!--&lt;!&ndash;                <div class="custom-control custom-control-sm custom-checkbox notext">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <input type="checkbox" wicket:id="select" class="custom-control-input">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <label class="custom-control-label" for="pid1"></label>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="custom-control custom-checkbox">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <input type="checkbox" wicket:id="select" class="custom-control-input" id="customCheck1">&ndash;&gt;-->
+<!--&lt;!&ndash;                    &lt;!&ndash;                <label class="custom-control-label" for="customCheck1">Option Label</label>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--                <div class="custom-control custom-control-sm custom-checkbox notext">-->
+<!--                    <input type="checkbox" wicket:id="select" class="custom-control-input">-->
+<!--                    <label class="custom-control-label"></label>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <div class="nk-tb-col tb-col-sm">
+            <span class="tb-product">
+                <span wicket:id="nomCommercial" class="title">Pink Fitness Tracker</span>
+            </span>
+            </div>
+            <div class="nk-tb-col">
+                <span wicket:id="datePeremption" class="tb-sub">UY3749</span>
+            </div>
+            <div class="nk-tb-col">
+                <span wicket:id="prixUnitaire" class="tb-lead">$ 99.49</span>
+            </div>
+            <div class="nk-tb-col">
+                <span wicket:id="quantiteStk" class="tb-sub">49</span>
+            </div>
+            <div class="nk-tb-col">
+                <span wicket:id="categorie" class="tb-sub">Fitbit, Tracker</span>
+            </div>
+            <div class="nk-tb-col tb-col-md">
+                <a wicket:id="selectButton" href="#" class="btn btn-primary">Sélectionner</a>
+                <a wicket:id="deselectButton" href="#" class="btn btn-danger">Retirer</a>
+            </div>
+        </div><!-- .nk-tb-item -->
+
+    </div><!-- .nk-tb-list -->
+    <br><br>
+    <a wicket:id="send-selection" href="#" class="btn btn-wider btn-primary"><span>Continuer</span><em class="icon ni ni-arrow-right"></em></a>
+</wicket:panel>
+</body>
+</html>

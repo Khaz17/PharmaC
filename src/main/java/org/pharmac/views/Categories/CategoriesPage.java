@@ -22,10 +22,10 @@ import java.util.List;
 
 @MountPath("categories")
 public class CategoriesPage extends BasePage {
-
-	private Categorie categorie = new Categorie();
 	@SpringBean
 	private CategorieService categorieService;
+
+	private Categorie categorie = new Categorie();
 
 	public CategoriesPage() {
 		LoadableDetachableModel loadableDetachableModel = new LoadableDetachableModel() {
@@ -69,6 +69,7 @@ public class CategoriesPage extends BasePage {
 			@Override
 			protected void onSubmit() {
 				categorieService.createOrUpdateCategorie(categorie);
+				getModel().setObject(new Categorie());
 			}
 		};
 
