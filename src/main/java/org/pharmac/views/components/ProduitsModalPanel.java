@@ -30,25 +30,13 @@ public abstract class ProduitsModalPanel extends Panel {
 				item.add(new Label("dci", produitRow.getDci()));
 				item.add(new Label("prixUnitaire", produitRow.getPrixUnitaire()));
 				item.add(new Label("voieAdministration", produitRow.getVoieAdministration()));
+				item.add(new Label("stockActuel", produitService.getProduitStockTotal(produitRow.getCodeP())));
 				item.add(new AjaxLink<Void>("select-produit") {
 					@Override
 					public void onClick(AjaxRequestTarget target) {
 						onSelected(target, produitRow);
 					}
 				});
-//				item.add(new AjaxEventBehavior("click") {
-//					@Override
-//					protected void onEvent(AjaxRequestTarget target) {
-//						onSelected(target, produitRow);
-////						target.appendJavaScript("$('#" + ProduitsModalPanel.this.getMarkupId() + "').modal('hide');");
-//					}
-//
-////					@Override
-////					protected void onComponentTag(ComponentTag tag) {
-////						super.onComponentTag(tag);
-////						tag.put("data-dismiss", "modal");
-////					}
-//				});
 				item.setOutputMarkupPlaceholderTag(true);
 			}
 		};
@@ -58,6 +46,4 @@ public abstract class ProduitsModalPanel extends Panel {
 
 	public abstract void onSelected(AjaxRequestTarget target, Produit produit);
 
-	public void setOnSelected(Object o) {
-	}
 }

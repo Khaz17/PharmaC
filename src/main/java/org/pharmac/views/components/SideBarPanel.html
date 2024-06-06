@@ -5,28 +5,30 @@
     <div class="nk-sidebar-main is-light">
         <div class="nk-sidebar-inner" data-simplebar>
             <div class="nk-menu-content menu-active" data-content="navPharmacy">
-                <h5 class="title">Pharmacy</h5>
+                <h4 wicket:id="pharmacyName" class="title">Pharmacy</h4>
+<!--                <span wicket:id="pharmacyAddress"></span>-->
+<!--                <span wicket:id="pharmacyTel"></span>-->
                 <ul class="nk-menu">
                     <li class="nk-menu-item">
                         <a wicket:id="home-page" href="#" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-dashboard-fill"></em></span>
-                            <span class="nk-menu-text">Dashboard</span>
+                            <span class="nk-menu-text">Accueil</span>
                         </a>
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
                         <a wicket:id="categories-page" href="#" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-msg-fill"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-link-group"></em></span>
                             <span class="nk-menu-text">Catégories</span>
                         </a>
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-home-fill"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-contact-fill"></em></span>
                             <span class="nk-menu-text">Fournisseurs</span>
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a wicket:id="fournisseurs-page" href="#" class="nk-menu-link"><span class="nk-menu-text">Fournisseurs List</span></a>
+                                <a wicket:id="fournisseurs-page" href="#" class="nk-menu-link"><span class="nk-menu-text">Liste des fournisseurs</span></a>
                             </li>
                             <li class="nk-menu-item">
                                 <a wicket:id="editfournisseur-page" href="#" class="nk-menu-link"><span class="nk-menu-text">Edit Fournisseur</span></a>
@@ -60,10 +62,10 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a wicket:id="newproduct-page" href="#" class="nk-menu-link"><span class="nk-menu-text">Add Product</span></a>
+                                <a wicket:id="newproduct-page" href="#" class="nk-menu-link"><span class="nk-menu-text">Ajouter produit</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a wicket:id="products-page" href="#" class="nk-menu-link"><span class="nk-menu-text">Products List</span></a>
+                                <a wicket:id="products-page" href="#" class="nk-menu-link"><span class="nk-menu-text">Liste des produits</span></a>
                             </li>
 <!--                            <li class="nk-menu-item">-->
 <!--                                <a wicket:id="details-page" href="#" class="nk-menu-link"><span class="nk-menu-text">Product Details</span></a>-->
@@ -73,7 +75,7 @@
 
                     <li class="nk-menu-item">
                         <a wicket:id="stocks-page" href="#" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-msg-fill"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-package"></em></span>
                             <span class="nk-menu-text">Stocks</span>
                         </a>
                     </li><!-- .nk-menu-item -->
@@ -85,7 +87,7 @@
 <!--                    </li>&lt;!&ndash; .nk-menu-item &ndash;&gt;-->
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-capsule-fill"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-exchange"></em></span>
                             <span class="nk-menu-text">Ventes</span>
                         </a>
                         <ul class="nk-menu-sub">
@@ -97,95 +99,119 @@
                             </li>
                         </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->
+
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-repeat"></em></span>
-                            <span class="nk-menu-text">Return</span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                            <span class="nk-menu-text">Utilisateurs</span>
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="html/pharmacy/add-wastage-return.html" class="nk-menu-link"><span class="nk-menu-text">Add Wastage Return</span></a>
+                                <a wicket:id="newutilisateur-page" href="#" class="nk-menu-link"><span class="nk-menu-text">Nouvel utilisateur</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/pharmacy/wastage-return.html" class="nk-menu-link"><span class="nk-menu-text">Wastage Return List</span></a>
+                                <a wicket:id="affectationdroits-page" href="#" class="nk-menu-link"><span class="nk-menu-text">Gestion des rôles</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/pharmacy/add-manufacturer-return.html" class="nk-menu-link"><span class="nk-menu-text">Add Manufacture Return</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="html/pharmacy/manufacturer-return.html" class="nk-menu-link"><span class="nk-menu-text">Manufacturer Return List</span></a>
-                            </li>
-                        </ul><!-- .nk-menu-sub -->
-                    </li><!-- .nk-menu-item -->
-                    <li class="nk-menu-item has-sub">
-                        <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-user-circle-fill"></em></span>
-                            <span class="nk-menu-text">Human resource</span>
-                        </a>
-                        <ul class="nk-menu-sub">
-                            <li class="nk-menu-item">
-                                <a href="html/pharmacy/member.html" class="nk-menu-link"><span class="nk-menu-text">Member</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="html/pharmacy/members-profile-regular.html" class="nk-menu-link"><span class="nk-menu-text">Members Profile</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="html/pharmacy/attendence.html" class="nk-menu-link"><span class="nk-menu-text">Attendence</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="html/pharmacy/salary.html" class="nk-menu-link"><span class="nk-menu-text">Salary</span></a>
-                            </li>
-                        </ul><!-- .nk-menu-sub -->
-                    </li><!-- .nk-menu-item -->
-                    <li class="nk-menu-item has-sub">
-                        <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-coin-alt-fill"></em></span>
-                            <span class="nk-menu-text">Finance</span>
-                        </a>
-                        <ul class="nk-menu-sub">
-                            <li class="nk-menu-item">
-                                <a href="html/pharmacy/income-list.html" class="nk-menu-link"><span class="nk-menu-text">Income</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="html/pharmacy/expense-list.html" class="nk-menu-link"><span class="nk-menu-text">Expence</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="html/pharmacy/invoice-list.html" class="nk-menu-link"><span class="nk-menu-text">Invoice List</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="html/pharmacy/invoice-details.html" class="nk-menu-link"><span class="nk-menu-text">Invoice Details</span></a>
-                            </li>
-                        </ul><!-- .nk-menu-sub -->
-                    </li><!-- .nk-menu-item -->
-                    <li class="nk-menu-item has-sub">
-                        <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-activity-round-fill"></em></span>
-                            <span class="nk-menu-text">Report</span>
-                        </a>
-                        <ul class="nk-menu-sub">
-                            <li class="nk-menu-item">
-                                <a href="html/pharmacy/sales-report.html" class="nk-menu-link"><span class="nk-menu-text">Sales Report</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="html/pharmacy/purchase-report.html" class="nk-menu-link"><span class="nk-menu-text">Purchase Report</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="html/pharmacy/stock-report.html" class="nk-menu-link"><span class="nk-menu-text">Stock Report</span></a>
+                                <a wicket:id="utilisateurs-page" href="#" class="nk-menu-link"><span class="nk-menu-text">Liste des utilisateurs</span></a>
                             </li>
                         </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
-                        <a href="html/pharmacy/support.html" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-msg-fill"></em></span>
-                            <span class="nk-menu-text">Support</span>
+                        <a wicket:id="dashboard-page" href="#" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-dashboard"></em></span>
+                            <span class="nk-menu-text">Tableau de bord</span>
                         </a>
                     </li><!-- .nk-menu-item -->
-                    <li class="nk-menu-item">
-                        <a href="html/pharmacy/general-settings.html" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-setting-fill"></em></span>
-                            <span class="nk-menu-text">Setting</span>
-                        </a>
-                    </li><!-- .nk-menu-item -->
+<!--                    <li class="nk-menu-item has-sub">-->
+<!--                        <a href="#" class="nk-menu-link nk-menu-toggle">-->
+<!--                            <span class="nk-menu-icon"><em class="icon ni ni-repeat"></em></span>-->
+<!--                            <span class="nk-menu-text">Return</span>-->
+<!--                        </a>-->
+<!--                        <ul class="nk-menu-sub">-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/add-wastage-return.html" class="nk-menu-link"><span class="nk-menu-text">Add Wastage Return</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/wastage-return.html" class="nk-menu-link"><span class="nk-menu-text">Wastage Return List</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/add-manufacturer-return.html" class="nk-menu-link"><span class="nk-menu-text">Add Manufacture Return</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/manufacturer-return.html" class="nk-menu-link"><span class="nk-menu-text">Manufacturer Return List</span></a>-->
+<!--                            </li>-->
+<!--                        </ul>&lt;!&ndash; .nk-menu-sub &ndash;&gt;-->
+<!--                    </li>&lt;!&ndash; .nk-menu-item &ndash;&gt;-->
+<!--                    <li class="nk-menu-item has-sub">-->
+<!--                        <a href="#" class="nk-menu-link nk-menu-toggle">-->
+<!--                            <span class="nk-menu-icon"><em class="icon ni ni-user-circle-fill"></em></span>-->
+<!--                            <span class="nk-menu-text">Human resource</span>-->
+<!--                        </a>-->
+<!--                        <ul class="nk-menu-sub">-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/member.html" class="nk-menu-link"><span class="nk-menu-text">Member</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/members-profile-regular.html" class="nk-menu-link"><span class="nk-menu-text">Members Profile</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/attendence.html" class="nk-menu-link"><span class="nk-menu-text">Attendence</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/salary.html" class="nk-menu-link"><span class="nk-menu-text">Salary</span></a>-->
+<!--                            </li>-->
+<!--                        </ul>&lt;!&ndash; .nk-menu-sub &ndash;&gt;-->
+<!--                    </li>&lt;!&ndash; .nk-menu-item &ndash;&gt;-->
+<!--                    <li class="nk-menu-item has-sub">-->
+<!--                        <a href="#" class="nk-menu-link nk-menu-toggle">-->
+<!--                            <span class="nk-menu-icon"><em class="icon ni ni-coin-alt-fill"></em></span>-->
+<!--                            <span class="nk-menu-text">Finance</span>-->
+<!--                        </a>-->
+<!--                        <ul class="nk-menu-sub">-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/income-list.html" class="nk-menu-link"><span class="nk-menu-text">Income</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/expense-list.html" class="nk-menu-link"><span class="nk-menu-text">Expence</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/invoice-list.html" class="nk-menu-link"><span class="nk-menu-text">Invoice List</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/invoice-details.html" class="nk-menu-link"><span class="nk-menu-text">Invoice Details</span></a>-->
+<!--                            </li>-->
+<!--                        </ul>&lt;!&ndash; .nk-menu-sub &ndash;&gt;-->
+<!--                    </li>&lt;!&ndash; .nk-menu-item &ndash;&gt;-->
+<!--                    <li class="nk-menu-item has-sub">-->
+<!--                        <a href="#" class="nk-menu-link nk-menu-toggle">-->
+<!--                            <span class="nk-menu-icon"><em class="icon ni ni-activity-round-fill"></em></span>-->
+<!--                            <span class="nk-menu-text">Report</span>-->
+<!--                        </a>-->
+<!--                        <ul class="nk-menu-sub">-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/sales-report.html" class="nk-menu-link"><span class="nk-menu-text">Sales Report</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/purchase-report.html" class="nk-menu-link"><span class="nk-menu-text">Purchase Report</span></a>-->
+<!--                            </li>-->
+<!--                            <li class="nk-menu-item">-->
+<!--                                <a href="html/pharmacy/stock-report.html" class="nk-menu-link"><span class="nk-menu-text">Stock Report</span></a>-->
+<!--                            </li>-->
+<!--                        </ul>&lt;!&ndash; .nk-menu-sub &ndash;&gt;-->
+<!--                    </li>&lt;!&ndash; .nk-menu-item &ndash;&gt;-->
+<!--                    <li class="nk-menu-item">-->
+<!--                        <a href="html/pharmacy/support.html" class="nk-menu-link">-->
+<!--                            <span class="nk-menu-icon"><em class="icon ni ni-msg-fill"></em></span>-->
+<!--                            <span class="nk-menu-text">Support</span>-->
+<!--                        </a>-->
+<!--                    </li>&lt;!&ndash; .nk-menu-item &ndash;&gt;-->
+<!--                    <li class="nk-menu-item">-->
+<!--                        <a href="html/pharmacy/general-settings.html" class="nk-menu-link">-->
+<!--                            <span class="nk-menu-icon"><em class="icon ni ni-setting-fill"></em></span>-->
+<!--                            <span class="nk-menu-text">Setting</span>-->
+<!--                        </a>-->
+<!--                    </li>&lt;!&ndash; .nk-menu-item &ndash;&gt;-->
                 </ul><!-- .nk-menu -->
             </div>
         </div>

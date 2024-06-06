@@ -25,6 +25,11 @@ public class Vente implements Serializable {
 
 	private String nomClient;
 
-	@OneToMany(mappedBy = "vente")
+//	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne
+	@JoinColumn(name = "utilisateur_id", nullable = false, foreignKey = @ForeignKey(name = "FK_Utilisateur"))
+	private Utilisateur utilisateur;
+
+	@OneToMany(mappedBy = "vente", fetch = FetchType.LAZY)
 	private List<DetailVente> detailVenteList;
 }

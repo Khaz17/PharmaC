@@ -29,9 +29,6 @@ public class DetailVenteService {
 	}
 
 	public List<DetailVente> getDetailsVenteByVente(Vente vente) {
-//		Optional<Vente> vente = venteService.getVente(id);
-//		if(vente.isPresent()) {
-//		}
 		return detailVenteRepository.findDetailVentesByVente(vente);
 	}
 

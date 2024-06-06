@@ -13,6 +13,7 @@ public class Stock implements Serializable {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idStk;
 
+	@Column(nullable = false)
 	private Date datePeremption;
 
 	@Column(nullable = false)

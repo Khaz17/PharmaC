@@ -25,7 +25,7 @@ import org.wicketstuff.annotation.mount.MountPath;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@MountPath("stocks")
+@MountPath("gestionnaire/new-stock")
 public class NewStocksPage extends BasePage {
 
 	@SpringBean

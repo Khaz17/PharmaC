@@ -16,6 +16,8 @@ import org.pharmac.models.Fournisseur;
 import org.pharmac.services.FournisseurService;
 import org.pharmac.views.components.BasePage;
 import org.pharmac.views.components.ConfirmDeletePage;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.wicketstuff.annotation.mount.MountPath;
 
 import java.util.Collections;
@@ -29,6 +31,8 @@ public class FournisseursPage extends BasePage {
 	private FournisseurService fournisseurService;
 
 	public FournisseursPage() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
 		LoadableDetachableModel loadableDetachableModel = new LoadableDetachableModel() {
 			@Override
 			protected Object load() {
@@ -39,12 +43,28 @@ public class FournisseursPage extends BasePage {
 		};
 //		final List<Fournisseur> fournisseurList = service.getFournisseurs();
 
+		add(new Link<Void>("ajout-fournisseur") {
+			@Override
+			public void onClick() {
+			}
+
+			@Override
+			public boolean isVisible() {
+				return authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ADMIN"));
+			}
+		});
+
 		Form<Fournisseur> form = new Form<>("form", new CompoundPropertyModel<>(fournisseur)){
 			@Override
 			protected void onSubmit() {
 				fournisseurService.createOrUpdateFournisseur(fournisseur);
 				setModelObject(new Fournisseur());
 				setResponsePage(FournisseursPage.class);
+			}
+
+			@Override
+			public boolean isVisible() {
+				return authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ADMIN"));
 			}
 		};
 
@@ -76,6 +96,11 @@ public class FournisseursPage extends BasePage {
 						parameters.add("fournisseurToEditId", fournisseurRow.getIdF());
 						setResponsePage(EditFournisseurPage.class, parameters);
 					}
+
+					@Override
+					public boolean isVisible() {
+						return authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ADMIN"));
+					}
 				});
 				item.add(new AjaxLink<Void>("delete") {
 					@Override
@@ -86,6 +111,11 @@ public class FournisseursPage extends BasePage {
 						setResponsePage(ConfirmDeletePage.class, parameters);
 //						fournisseurService.removeFournisseur(fournisseurRow.getIdF());
 //						setResponsePage(FournisseursPage.class);
+					}
+
+					@Override
+					public boolean isVisible() {
+						return authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ADMIN"));
 					}
 
 //					@Override

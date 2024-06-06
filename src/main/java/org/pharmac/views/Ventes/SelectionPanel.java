@@ -40,7 +40,7 @@ public class SelectionPanel extends Panel {
 			@Override
 			protected Object load() {
 				List<Produit> produits = Collections.emptyList();
-				produits = produitService.getProduits();
+				produits = produitService.getProduitsDisponibles();
 				return produits;
 			}
 		};

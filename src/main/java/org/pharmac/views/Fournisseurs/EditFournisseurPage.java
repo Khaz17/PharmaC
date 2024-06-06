@@ -1,6 +1,7 @@
 package org.pharmac.views.Fournisseurs;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.HiddenField;
@@ -12,9 +13,13 @@ import org.apache.wicket.util.string.StringValue;
 import org.pharmac.models.Fournisseur;
 import org.pharmac.services.FournisseurService;
 import org.pharmac.views.components.BasePage;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.wicketstuff.annotation.mount.MountPath;
 
 import java.util.Optional;
 
+@MountPath("admin/edit-fournisseur")
 public class EditFournisseurPage extends BasePage {
 
 	private Fournisseur fournisseur = new Fournisseur();
@@ -31,10 +36,17 @@ public class EditFournisseurPage extends BasePage {
 			fournisseurToEdit.ifPresent(value -> fournisseur = value);
 		}
 
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
 		Form<Fournisseur> form = new Form<>("form", new CompoundPropertyModel<>(fournisseur)) {
 			@Override
 			protected void onSubmit() {
 				service.createOrUpdateFournisseur(fournisseur);
+			}
+
+			@Override
+			public boolean isVisible() {
+				return authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ADMIN"));
 			}
 		};
 

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:extend>
+    <div class="nk-block-head nk-block-head-sm">
+        <div class="nk-block-between">
+            <div class="nk-block-head-content">
+                <h3 class="nk-block-title page-title fw-normal">Accorder des droits</h3>
+                <div class="nk-block-des text-soft">
+                    <p>Choisissez les rôles d'usage à affecter à vos utilisateurs</p>
+                </div>
+            </div><!-- .nk-block-head-content -->
+        </div><!-- .nk-block-between -->
+    </div><!-- .nk-block-head -->
+    <div class="nk-block">
+        <div class="card card-bordered">
+            <div class="card-inner">
+                <div wicket:id="container">
+                    <form wicket:id="form">
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Utilisateur</label><br>
+                                    <div class="form-control-wrap">
+                                        <div class="input-group">
+                                            <input type="text" wicket:id="nomUtilisateur" class="form-control" placeholder="Utilisateur à modifier">
+                                            <div class="input-group-append">
+                                                <button type="button" data-bs-toggle="modal" data-bs-target="#modalDefault" class="btn btn-outline-primary btn-dim">Sélectionner</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+<!--                                    <span wicket:id="group">-->
+<!--&lt;!&ndash;                                        <input type="checkbox" wicket:id="groupSelector"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <label for="groupselector">Tout sélectionner / désélectionner</label>&ndash;&gt;-->
+<!--                                        <tr wicket:id="rolesList">-->
+<!--                                            <td><input type="checkbox" wicket:id="check"/></td>-->
+<!--                                            <td><span wicket:id="roleLibelle"></span></td>-->
+<!--                                        </tr>-->
+<!--                                    </span>-->
+
+                                <span class="preview-title overline-title">Affectez des rôles à l'utilisateur</span>
+                                <div wicket:id="group">
+<!--                                    <div class="custom-control custom-checkbox" wicket:id="rolesList">-->
+<!--                                        <input wicket:id="check" type="checkbox" class="custom-control-input">-->
+<!--                                        <label wicket:id="roleLibelle" class="custom-control-label">Option Label</label>-->
+<!--                                    </div>-->
+                                    <ul>
+                                        <li wicket:id="rolesList">
+                                            <input type="checkbox" wicket:id="check" class="form-check">
+                                            <label wicket:id="roleLibelle"></label>                                        </li>
+                                    </ul>
+                                </div>
+<!--                                <span wicket:id="group">-->
+<!--                                    <ul class="custom-control-group custom-control-vertical w-100">-->
+<!--                                    <li wicket:id="rolesList">-->
+<!--                                        <div class="custom-control custom-control-sm custom-checkbox custom-control-pro">-->
+<!--                                            <input type="checkbox" wicket:id="check" class="custom-control-input">-->
+<!--                                            <label class="custom-control-label">-->
+<!--                                                <span class="user-card">-->
+<!--                                                    <span wicket:id="roleLibelle" class="lead-text">Keith Jensen</span>-->
+<!--                                                </span>-->
+<!--                                            </label>-->
+<!--                                        </div>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                                </span>-->
+
+<!--                                <div class="card card-bordered card-full">-->
+<!--                                    <div class="card-inner-group" wicket:id="group">-->
+<!--                                        <div class="card-inner card-inner-md" wicket:id="rolesList">-->
+<!--                                            <input type="checkbox" wicket:id="check" class="custom-control-input" name="user-selection">-->
+<!--                                            <label class="custom-control-label">-->
+<!--                                                <span class="user-card">-->
+<!--                                                    <span wicket:id="roleLibelle" class="lead-text">Keith Jensen</span>-->
+<!--                                                </span>-->
+<!--                                            </label>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="card card-bordered" wicket:id="">-->
+<!--&lt;!&ndash;                                    <div class="card-header border-bottom">Featured</div>&ndash;&gt;-->
+<!--                                    <ul class="list-group list-group-flush">-->
+<!--                                        <li class="list-group-item">-->
+<!--                                            <div class="custom-control custom-control-sm custom-checkbox custom-control-pro">-->
+<!--                                                <input type="checkbox" class="custom-control-input" name="btnCheckControl" id="btnCheckControl1">-->
+<!--                                                <label class="custom-control-label" for="btnCheckControl1">Option Label</label>-->
+<!--                                            </div>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+
+
+                            </div><!-- .col -->
+
+                            <div class="col-12">
+                                <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
+                                    <li>
+                                        <button class="btn btn-primary" wicket:id="confirm" type="submit">Enregistrer</button>
+                                        <!--                                        <a href="#"  data-bs-dismiss="modal" class="btn btn-primary">Add Manufacturer</a>-->
+                                    </li>
+                                    <li>
+                                        <button type="reset" class="link link-light">Cancel</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--row-->
+                    </form>
+                </div>
+
+            </div><!-- .card-inner-group -->
+
+            <div wicket:id="utilisateurspanel"></div>
+        </div><!-- .card -->
+    </div><!-- .nk-block -->
+</wicket:extend>
+</body>
+</html>

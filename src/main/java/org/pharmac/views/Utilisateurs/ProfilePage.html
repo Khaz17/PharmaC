@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:extend>
+    <div class="nk-block-head">
+        <div class="nk-block-head-content">
+            <h2 class="nk-block-title page-title">Mon profil</h2>
+            <div class="nk-block-des">
+                <p>Définissez vos paramètres et informations de profil <span class="text-primary"><em class="icon ni ni-info"></em></span></p>
+            </div>
+        </div>
+    </div><!-- .nk-block-head -->
+    <div class="nk-block nk-block-lg">
+        <div class="card">
+            <div class="card-content">
+                <ul class="nav nav-tabs nav-tabs-card">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#tabItem1"><span>Personnel</span></a>
+                    </li>
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" data-bs-toggle="tab" href="#tabItem2"><span>Notification</span></a>-->
+<!--                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tabItem3"><span>Sécurité</span></a>
+                    </li>
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" data-bs-toggle="tab" href="#tabItem4"><span>Activity</span></a>-->
+<!--                    </li>-->
+                </ul>
+                <div class="card-inner">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tabItem1">
+                            <div class="nk-block">
+                                <div class="nk-block-head">
+                                    <div class="nk-block-head-content">
+                                        <h5 class="nk-block-title">Informations personnelles</h5>
+                                        <div class="nk-block-des">
+                                            <p>Informations de base telles que votre nom et votre adresse</p>
+                                        </div>
+                                    </div>
+                                </div><!-- .nk-block-head -->
+                                <div class="card">
+                                    <div class="nk-data data-list">
+                                        <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
+                                            <div class="data-col">
+                                                <span class="data-label">Username</span>
+                                                <span class="data-value" wicket:id="username">Abu Bin Ishtiyak</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- .data-item -->
+                                        <div class="data-item">
+                                            <div class="data-col">
+                                                <span class="data-label">Nom</span>
+                                                <span class="data-value" wicket:id="nomU">info@softnio.com</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- .data-item -->
+                                        <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
+                                            <div class="data-col">
+                                                <span class="data-label">Prénom</span>
+                                                <span class="data-value text-soft" wicket:id="prenomU">Not add yet</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- .data-item -->
+                                        <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
+                                            <div class="data-col">
+                                                <span class="data-label">Téléphone</span>
+                                                <span class="data-value" wicket:id="telU">29 Feb, 1986</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- .data-item -->
+                                        <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
+                                            <div class="data-col">
+                                                <span class="data-label">Email</span>
+                                                <span class="data-value" wicket:id="emailU">2337 Kildeer Drive,<br>Kentucky, Canada</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- .data-item -->
+                                        <div class="data-item" data-bs-toggle="modal" data-bs-target="#profile-edit">
+                                            <div class="data-col">
+                                                <span class="data-label">Adresse</span>
+                                                <span class="data-value" wicket:id="adresseU">2337 Kildeer Drive,<br>Kentucky, Canada</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- .data-item -->
+                                    </div><!-- .nk-data -->
+                                </div>
+                            </div><!-- .nk-block -->
+                        </div><!-- tab pane -->
+                        <div class="tab-pane" id="tabItem3">
+                            <div class="nk-block-head nk-block-head-lg">
+                                <div class="nk-block-head-content">
+                                    <h5 class="nk-block-title">Paramètres de sécurité</h5>
+                                    <div class="nk-block-des">
+                                        <p>Ces paramètres vous permettent de protéger votre activité</p>
+                                    </div>
+                                </div>
+                            </div><!-- .nk-block-head -->
+                            <div class="nk-block">
+                                <div class="card card-bordered">
+                                    <div class="card-inner-group">
+<!--                                        <div class="card-inner">-->
+<!--                                            <div class="between-center flex-wrap flex-md-nowrap g-3">-->
+<!--                                                <div class="nk-block-text">-->
+<!--                                                    <h6>Save my Activity Logs</h6>-->
+<!--                                                    <p>You can save your all activity logs including unusual activity detected.</p>-->
+<!--                                                </div>-->
+<!--                                                <div class="nk-block-actions">-->
+<!--                                                    <ul class="align-center gx-3">-->
+<!--                                                        <li class="order-md-last">-->
+<!--                                                            <div class="custom-control custom-switch me-n2">-->
+<!--                                                                <input type="checkbox" class="custom-control-input" checked="" id="activity-log">-->
+<!--                                                                <label class="custom-control-label" for="activity-log"></label>-->
+<!--                                                            </div>-->
+<!--                                                        </li>-->
+<!--                                                    </ul>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>&lt;!&ndash; .card-inner &ndash;&gt;-->
+                                        <div class="card-inner">
+                                            <div class="between-center flex-wrap g-3">
+                                                <div class="nk-block-text">
+                                                    <h6>Changer le mot de passe</h6>
+                                                    <p>Choisir un mot de passe unique pour protéger votre compte.</p>
+                                                </div>
+                                                <div class="nk-block-actions flex-shrink-sm-0">
+                                                    <ul class="align-center flex-wrap flex-sm-nowrap gx-3 gy-2">
+                                                        <li class="order-md-last">
+                                                            <a href="#" wicket:id="changePassword" class="btn btn-primary">Changer password</a>
+                                                        </li>
+<!--                                                        <li>-->
+<!--                                                            <em class="text-soft text-date fs-12px">Last changed: <span>Oct 2, 2019</span></em>-->
+<!--                                                        </li>-->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div><!-- .card-inner -->
+<!--                                        <div class="card-inner">-->
+<!--                                            <div class="between-center flex-wrap flex-md-nowrap g-3">-->
+<!--                                                <div class="nk-block-text">-->
+<!--                                                    <h6>2 Factor Auth &nbsp; <span class="badge bg-success ms-0">Enabled</span></h6>-->
+<!--                                                    <p>Secure your account with 2FA security. When it is activated you will need to enter not only your password, but also a special code using app. You can receive this code by in mobile app. </p>-->
+<!--                                                </div>-->
+<!--                                                <div class="nk-block-actions">-->
+<!--                                                    <a href="#" class="btn btn-primary">Disable</a>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>&lt;!&ndash; .card-inner &ndash;&gt;-->
+                                    </div><!-- .card-inner-group -->
+                                </div><!-- .card -->
+                            </div><!-- .nk-block -->
+                        </div><!--tab pane-->
+<!--                        <div class="tab-pane" id="tabItem4">-->
+<!--                            <div class="nk-block-head nk-block-head-lg">-->
+<!--                                <div class="nk-block-head-content">-->
+<!--                                    <h5 class="nk-block-title">Recent Activity</h5>-->
+<!--                                    <div class="nk-block-des">-->
+<!--                                        <p>Here is your last 20 login activities log. <span class="text-soft"><em class="icon ni ni-info"></em></span></p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>&lt;!&ndash; .nk-block-head &ndash;&gt;-->
+<!--                            <div class="nk-block card card-bordered">-->
+<!--                                <table class="table table-ulogs">-->
+<!--                                    <thead class="table-light">-->
+<!--                                    <tr>-->
+<!--                                        <th class="tb-col-os"><span class="overline-title">Browser <span class="d-sm-none">/ IP</span></span></th>-->
+<!--                                        <th class="tb-col-ip"><span class="overline-title">IP</span></th>-->
+<!--                                        <th class="tb-col-time"><span class="overline-title">Time</span></th>-->
+<!--                                        <th class="tb-col-action"><span class="overline-title">&nbsp;</span></th>-->
+<!--                                    </tr>-->
+<!--                                    </thead>-->
+<!--                                    <tbody>-->
+<!--                                    <tr>-->
+<!--                                        <td class="tb-col-os">Chrome on Window</td>-->
+<!--                                        <td class="tb-col-ip"><span class="sub-text">192.149.122.128</span></td>-->
+<!--                                        <td class="tb-col-time"><span class="sub-text">11:34 PM</span></td>-->
+<!--                                        <td class="tb-col-action"></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td class="tb-col-os">Mozilla on Window</td>-->
+<!--                                        <td class="tb-col-ip"><span class="sub-text">86.188.154.225</span></td>-->
+<!--                                        <td class="tb-col-time"><span class="sub-text">Nov 20, 2019 <span class="d-none d-sm-inline-block">10:34 PM</span></span></td>-->
+<!--                                        <td class="tb-col-action"><a href="#" class="link-cross me-sm-n1"><em class="icon ni ni-cross"></em></a></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td class="tb-col-os">Chrome on iMac</td>-->
+<!--                                        <td class="tb-col-ip"><span class="sub-text">192.149.122.128</span></td>-->
+<!--                                        <td class="tb-col-time"><span class="sub-text">Nov 12, 2019 <span class="d-none d-sm-inline-block">08:56 PM</span></span></td>-->
+<!--                                        <td class="tb-col-action"><a href="#" class="link-cross me-sm-n1"><em class="icon ni ni-cross"></em></a></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td class="tb-col-os">Chrome on Window</td>-->
+<!--                                        <td class="tb-col-ip"><span class="sub-text">192.149.122.128</span></td>-->
+<!--                                        <td class="tb-col-time"><span class="sub-text">Nov 03, 2019 <span class="d-none d-sm-inline-block">04:29 PM</span></span></td>-->
+<!--                                        <td class="tb-col-action"><a href="#" class="link-cross me-sm-n1"><em class="icon ni ni-cross"></em></a></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td class="tb-col-os">Mozilla on Window</td>-->
+<!--                                        <td class="tb-col-ip"><span class="sub-text">86.188.154.225</span></td>-->
+<!--                                        <td class="tb-col-time"><span class="sub-text">Oct 29, 2019 <span class="d-none d-sm-inline-block">09:38 AM</span></span></td>-->
+<!--                                        <td class="tb-col-action"><a href="#" class="link-cross me-sm-n1"><em class="icon ni ni-cross"></em></a></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td class="tb-col-os">Chrome on iMac</td>-->
+<!--                                        <td class="tb-col-ip"><span class="sub-text">192.149.122.128</span></td>-->
+<!--                                        <td class="tb-col-time"><span class="sub-text">Oct 23, 2019 <span class="d-none d-sm-inline-block">04:16 PM</span></span></td>-->
+<!--                                        <td class="tb-col-action"><a href="#" class="link-cross me-sm-n1"><em class="icon ni ni-cross"></em></a></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td class="tb-col-os">Chrome on Window</td>-->
+<!--                                        <td class="tb-col-ip"><span class="sub-text">192.149.122.128</span></td>-->
+<!--                                        <td class="tb-col-time"><span class="sub-text">Oct 15, 2019 <span class="d-none d-sm-inline-block">11:41 PM</span></span></td>-->
+<!--                                        <td class="tb-col-action"><a href="#" class="link-cross me-sm-n1"><em class="icon ni ni-cross"></em></a></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td class="tb-col-os">Mozilla on Window</td>-->
+<!--                                        <td class="tb-col-ip"><span class="sub-text">86.188.154.225</span></td>-->
+<!--                                        <td class="tb-col-time"><span class="sub-text">Oct 13, 2019 <span class="d-none d-sm-inline-block">05:43 AM</span></span></td>-->
+<!--                                        <td class="tb-col-action"><a href="#" class="link-cross me-sm-n1"><em class="icon ni ni-cross"></em></a></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td class="tb-col-os">Chrome on iMac</td>-->
+<!--                                        <td class="tb-col-ip"><span class="sub-text">192.149.122.128</span></td>-->
+<!--                                        <td class="tb-col-time"><span class="sub-text">Oct 03, 2019 <span class="d-none d-sm-inline-block">04:12 AM</span></span></td>-->
+<!--                                        <td class="tb-col-action"><a href="#" class="link-cross me-sm-n1"><em class="icon ni ni-cross"></em></a></td>-->
+<!--                                    </tr>-->
+<!--                                    </tbody>-->
+<!--                                </table>-->
+<!--                            </div>&lt;!&ndash; .nk-block &ndash;&gt;-->
+<!--                        </div>&lt;!&ndash;tab pane&ndash;&gt;-->
+                    </div><!--tab content-->
+                </div><!--card inner-->
+            </div><!-- .card-content -->
+        </div><!--card-->
+        <div wicket:id="editProfile"></div>
+    </div><!--nk block lg-->
+</wicket:extend>
+</body>
+</html>

@@ -17,6 +17,8 @@ import org.pharmac.views.Stocks.EditStocksPage;
 import org.pharmac.views.Stocks.NewStocksPage;
 import org.pharmac.views.components.BasePage;
 import org.pharmac.views.components.ConfirmDeletePage;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.wicketstuff.annotation.mount.MountPath;
 
 import java.text.SimpleDateFormat;
@@ -24,7 +26,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
-@MountPath("product-details")
+@MountPath("details-produit")
 public class DetailsProduitPage extends BasePage {
 
 	@SpringBean
@@ -37,6 +39,7 @@ public class DetailsProduitPage extends BasePage {
 	private StockService stockService;
 
 	public DetailsProduitPage(PageParameters parameters) {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		StringValue idParam = parameters.get("idProduit");
 
 		if (!idParam.isNull()) {
@@ -47,18 +50,31 @@ public class DetailsProduitPage extends BasePage {
 //				List<Fournisseur> fournisseurs = fournisseurService.getProduitFournisseurs(produit.get().getCodeP());
 				List<Stock> stocks = stockService.getProduitStocks(produit.get().getCodeP());
 
+				add(new Label("titre", "Détails du produit " + produit.get().getNomComplet()));
 				add(new Label("nomCommercial", produit.get().getNomCommercial()));
 				add(new Label("dci", produit.get().getDci()));
+				add(new Label("formeGalenique", produit.get().getFormeGalenique()));
+				add(new Label("dosage", produit.get().getDosage()));
 				add(new Label("voieAdministration", produit.get().getVoieAdministration()));
+				add(new Label("nbreComprimes", produit.get().getNbreComprimes()));
 				add(new Label("prixUnitaire", produit.get().getPrixUnitaire()));
 				add(new Label("descriptionP", produit.get().getDescriptionP()));
 				add(new Label("categorie", categorie.getLibelleCtg()));
 //				add(new Label("fournisseurs", fournisseurs.toString()));
 
+				int stockTotal = produitService.getProduitStockTotal(produit.get().getCodeP());
+				add(new Label("stockTotal", stockTotal));
+
 				add(new Link<>("ajouter-stock") {
 					@Override
 					public void onClick() {
 						setResponsePage(NewStocksPage.class, parameters);
+					}
+					@Override
+					public boolean isVisible() {
+						return authentication != null && authentication.getAuthorities().stream().anyMatch(
+								a -> a.getAuthority().equals("ADMIN") ||
+										a.getAuthority().equals("GESTIONNAIRE_STOCK"));
 					}
 				});
 
@@ -67,6 +83,12 @@ public class DetailsProduitPage extends BasePage {
 					public void onClick() {
 
 						setResponsePage(AddOrEditProduitPage.class, parameters);
+					}
+					@Override
+					public boolean isVisible() {
+						return authentication != null && authentication.getAuthorities().stream().anyMatch(
+								a -> a.getAuthority().equals("ADMIN") ||
+										a.getAuthority().equals("GESTIONNAIRE_STOCK"));
 					}
 				});
 
@@ -77,6 +99,11 @@ public class DetailsProduitPage extends BasePage {
 						deleteParameters.add("elementType", produit.get().getClass().getSimpleName());
 						deleteParameters.add("elementId", produit.get().getCodeP());
 						setResponsePage(ConfirmDeletePage.class, deleteParameters);
+					}
+					@Override
+					public boolean isVisible() {
+						return authentication != null && authentication.getAuthorities().stream().anyMatch(
+								a -> a.getAuthority().equals("ADMIN"));
 					}
 				});
 
@@ -96,6 +123,13 @@ public class DetailsProduitPage extends BasePage {
 								PageParameters pageParameters = new PageParameters();
 								pageParameters.add("idParam", stock.getIdStk());
 								setResponsePage(EditStocksPage.class, pageParameters);
+							}
+
+							@Override
+							public boolean isVisible() {
+								return authentication != null && authentication.getAuthorities().stream().anyMatch(
+										a -> a.getAuthority().equals("ADMIN") ||
+												a.getAuthority().equals("GESTIONNAIRE_STOCK"));
 							}
 						});
 					}

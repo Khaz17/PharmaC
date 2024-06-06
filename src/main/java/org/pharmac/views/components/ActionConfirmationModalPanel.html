@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+    <!-- Modal Alert 2 -->
+    <div class="modal fade" tabindex="-1" id="modalAlert2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body modal-body-lg text-center">
+                    <div class="nk-modal">
+                        <em class="nk-modal-icon icon icon-circle icon-circle-xxl ni ni-alert-circle-fill bg-danger"></em>
+                        <h4 class="nk-modal-title">Êtes-vous sûr ?</h4>
+                        <div class="nk-modal-text">
+                            <p class="lead" wicket:id="operation">We are sorry, we were unable to process your payment. Please try after sometimes.</p>
+<!--                            <p class="text-soft">If you need help please contact us at (855) 485-7373.</p>-->
+                        </div>
+                        <div class="nk-modal-action mt-5">
+                                <div class="form-group">
+                                    <button wicket:id="confirm" class="btn btn-primary">Confirmer</button>
+                                    <button wicket:id="cancel" class="btn btn-secondary">Annuler</button>
+                                </div>
+                        </div>
+                    </div>
+                </div><!-- .modal-body -->
+            </div>
+        </div>
+    </div>
+</wicket:panel>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:extend>
+    <div class="nk-block-head nk-block-head-sm">
+        <div class="nk-block-between">
+            <div class="nk-block-head-content">
+                <h3 class="nk-block-title page-title">Modifier l'utilisateur <span wicket:id="id"></span></h3>
+                <div class="nk-block-des text-soft">
+                    <p>Éditer les informations de l'utilisateur de l'application.</p>
+                </div>
+            </div><!-- .nk-block-head-content -->
+        </div><!-- .nk-block-between -->
+    </div><!-- .nk-block-head -->
+    <div class="nk-block">
+        <div class="card card-bordered">
+            <div class="card-inner">
+                <!--                <div class="row gy-4">-->
+                <!--                    <div wicket:id="feedbackPanel"></div>-->
+                <form wicket:id="form" class="row gy-4">
+                    <div class="col-xxl-3 col-md-4">
+                        <div class="form-group">
+                            <label class="form-label" for="username">Username</label>
+                            <input type="text" wicket:id="username" class="form-control" id="username" placeholder="Nom d'utilisateur" required>
+                        </div>
+                    </div><!--col-->
+                    <div class="col-xxl-3 col-md-4">
+                        <div class="form-group">
+                            <label class="form-label" for="nomU">Nom</label>
+                            <input type="text" wicket:id="nomU" class="form-control" id="nomU" placeholder="Nom de famille" required>
+                        </div>
+                    </div><!--col-->
+                    <div class="col-xxl-3 col-md-4">
+                        <div class="form-group">
+                            <label class="form-label" for="prenomU">Prénom</label>
+                            <input type="text" wicket:id="prenomU" class="form-control" id="prenomU" placeholder="Prénom" required>
+                        </div>
+                    </div><!--col-->
+                    <div class="col-xxl-3 col-md-4">
+                        <div class="form-group">
+                            <label class="form-label" for="telU">Téléphone</label>
+                            <input type="text" wicket:id="telU" class="form-control" id="telU" placeholder="item" required>
+                        </div>
+                    </div><!--col-->
+                    <div class="col-xxl-3 col-md-4">
+                        <div class="form-group">
+                            <label class="form-label" for="emailU">Email</label>
+                            <input type="email" wicket:id="emailU" class="form-control" id="emailU" placeholder="Adresse électronique" required>
+                        </div>
+                    </div><!--col-->
+                    <div class="col-xxl-3 col-md-8">
+                        <div class="form-group">
+                            <label class="form-label" for="adresseU">Adresse</label>
+                            <input type="text" wicket:id="adresseU" class="form-control" id="adresseU" placeholder="Adresse" required>
+                        </div>
+                    </div><!--col-->
+                    <div class="col-xxl-3 col-md-4">
+                        <div class="form-group">
+                            <label class="form-label">Statut</label>
+                            <div class="form-control-wrap">
+                                <select wicket:id="actif" class="form-select js-select2">
+                                    <option value="default_option">Select</option>
+                                    <option value="option_select_status">Active</option>
+                                    <option value="option_select_status">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div><!--col-->
+                    <br>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Confirmer</button>
+                        </div>
+                    </div><!--col-->
+                </form>
+                <!--                </div>&lt;!&ndash;row&ndash;&gt;-->
+            </div><!-- .card-inner-group -->
+        </div><!-- .card -->
+    </div><!-- .nk-block -->
+</wicket:extend>
+</body>
+</html>

@@ -27,7 +27,7 @@
                         </tr>
                         </thead>
                         <tbody wicket:id="fournisseurs-list">
-                        <tr>
+                        <tr class="select-close">
                             <th wicket:id="id">1</th>
                             <td wicket:id="nom">Mark</td>
                             <td wicket:id="email">Otto</td>
@@ -42,6 +42,12 @@
         </div>
     </div>
 
+    <script>
+        $('.select-close').click(function() {
+            // Fermez le modal
+            $('#modalDefault').modal('hide');
+        });
+    </script>
 </wicket:panel>
 </body>
 </html>

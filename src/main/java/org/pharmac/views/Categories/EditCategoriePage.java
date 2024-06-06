@@ -1,5 +1,6 @@
 package org.pharmac.views.Categories;
 
+import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.HiddenField;
 import org.apache.wicket.markup.html.form.RequiredTextField;
@@ -11,9 +12,11 @@ import org.apache.wicket.util.string.StringValue;
 import org.pharmac.models.Categorie;
 import org.pharmac.services.CategorieService;
 import org.pharmac.views.components.BasePage;
+import org.wicketstuff.annotation.mount.MountPath;
 
 import java.util.Optional;
 
+@MountPath("admin/edit-categorie")
 public class EditCategoriePage extends BasePage {
 
 	private Categorie categorie = new Categorie();

@@ -1,0 +1,921 @@
+2024-06-03 12:04:32 INFO  org.pharmac.WicketApplication - Starting WicketApplication on DESKTOP-RNG8LDO with PID 16548 (started by ASUS TUF in C:\Users\ASUS TUF\Documents\Stage\CAGECFI 2024\Projects\PharmaC)
+2024-06-03 12:04:32 INFO  org.pharmac.WicketApplication - No active profile set, falling back to default profiles: default
+2024-06-03 12:04:33 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-03 12:04:33 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 122ms. Found 10 JPA repository interfaces.
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$c2932f1b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' of type [org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration$$EnhancerBySpringCGLIB$$1c87bdf0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hypermediaWebMvcConverters' of type [org.springframework.hateoas.config.WebConverters] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 12:04:34 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2024-06-03 12:04:34 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2024-06-03 12:04:34 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-03 12:04:34 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2024-06-03 12:04:34 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-03 12:04:34 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1458 ms
+2024-06-03 12:04:34 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket core library initializer
+2024-06-03 12:04:34 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket extensions initializer
+2024-06-03 12:04:34 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.markup.MarkupSettingsConfig$$EnhancerBySpringCGLIB$$831391c7
+2024-06-03 12:04:34 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.application.ApplicationSettingsConfig$$EnhancerBySpringCGLIB$$a9e2048b
+2024-06-03 12:04:34 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.pagestore.StoreSettingsConfig$$EnhancerBySpringCGLIB$$871f429e
+2024-06-03 12:04:34 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resources.SpringBootMainClassResourceRegistration$$EnhancerBySpringCGLIB$$b3a6ea1b
+2024-06-03 12:04:34 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.exceptions.ExceptionSettingsConfig$$EnhancerBySpringCGLIB$$215afd2
+2024-06-03 12:04:34 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.requrestcycle.RequestCycleSettingsConfig$$EnhancerBySpringCGLIB$$489b8557
+2024-06-03 12:04:34 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.csrf.CsrfAttacksPreventionConfig$$EnhancerBySpringCGLIB$$437fc1ee
+2024-06-03 12:04:34 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resourcesettings.packageresourceguard.PackageResourceGuardConfig$$EnhancerBySpringCGLIB$$c008ff12
+2024-06-03 12:04:34 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.stuff.annotationscan.AnnotatedMountScannerConfig$$EnhancerBySpringCGLIB$$b6e38b03
+2024-06-03 12:04:34 INFO  o.a.w.protocol.http.WebApplication - [wicket-filter] Started Wicket version 8.6.1 in DEPLOYMENT mode
+2024-06-03 12:04:34 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-03 12:04:35 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2024-06-03 12:04:35 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-06-03 12:04:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-03 12:04:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-03 12:04:35 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2024-06-03 12:04:36 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-03 12:04:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 12:04:36 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-03 12:04:37 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44f5259a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4dcc0e3d, org.springframework.security.web.header.HeaderWriterFilter@cd9ce76, org.springframework.security.web.authentication.logout.LogoutFilter@1c4a8c93, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@41fe0d98, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70313b0b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ecd6861, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e871e93, org.springframework.security.web.session.SessionManagementFilter@2943e61c, org.springframework.security.web.access.ExceptionTranslationFilter@58dd1d0c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@51a06fd5]
+2024-06-03 12:04:37 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-06-03 12:04:37 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2024-06-03 12:04:37 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2024-06-03 12:04:37 INFO  org.pharmac.WicketApplication - Started WicketApplication in 5.118 seconds (JVM running for 5.912)
+2024-06-03 12:06:48 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-06-03 12:06:48 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 12:06:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-03 12:06:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-03 12:06:48 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket core library initializer
+2024-06-03 12:06:48 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket extensions initializer
+2024-06-03 15:54:48 INFO  org.pharmac.WicketApplication - Starting WicketApplication on DESKTOP-RNG8LDO with PID 16856 (started by ASUS TUF in C:\Users\ASUS TUF\Documents\Stage\CAGECFI 2024\Projects\PharmaC)
+2024-06-03 15:54:48 INFO  org.pharmac.WicketApplication - No active profile set, falling back to default profiles: default
+2024-06-03 15:54:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-03 15:54:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 147ms. Found 10 JPA repository interfaces.
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$b3f22a7d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' of type [org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration$$EnhancerBySpringCGLIB$$de6b952] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hypermediaWebMvcConverters' of type [org.springframework.hateoas.config.WebConverters] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 15:54:50 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2024-06-03 15:54:50 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2024-06-03 15:54:50 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-03 15:54:50 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2024-06-03 15:54:50 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-03 15:54:50 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2029 ms
+2024-06-03 15:54:50 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket core library initializer
+2024-06-03 15:54:50 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket extensions initializer
+2024-06-03 15:54:51 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.markup.MarkupSettingsConfig$$EnhancerBySpringCGLIB$$74728d29
+2024-06-03 15:54:51 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.application.ApplicationSettingsConfig$$EnhancerBySpringCGLIB$$9b40ffed
+2024-06-03 15:54:51 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.pagestore.StoreSettingsConfig$$EnhancerBySpringCGLIB$$787e3e00
+2024-06-03 15:54:51 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resources.SpringBootMainClassResourceRegistration$$EnhancerBySpringCGLIB$$a505e57d
+2024-06-03 15:54:51 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.exceptions.ExceptionSettingsConfig$$EnhancerBySpringCGLIB$$f374ab34
+2024-06-03 15:54:51 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.requrestcycle.RequestCycleSettingsConfig$$EnhancerBySpringCGLIB$$39fa80b9
+2024-06-03 15:54:51 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.csrf.CsrfAttacksPreventionConfig$$EnhancerBySpringCGLIB$$34debd50
+2024-06-03 15:54:51 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resourcesettings.packageresourceguard.PackageResourceGuardConfig$$EnhancerBySpringCGLIB$$b167fa74
+2024-06-03 15:54:51 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.stuff.annotationscan.AnnotatedMountScannerConfig$$EnhancerBySpringCGLIB$$a8428665
+2024-06-03 15:54:51 INFO  o.a.w.protocol.http.WebApplication - [wicket-filter] Started Wicket version 8.6.1 in DEPLOYMENT mode
+2024-06-03 15:54:51 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-03 15:54:51 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2024-06-03 15:54:51 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-06-03 15:54:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-03 15:54:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-03 15:54:51 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2024-06-03 15:54:53 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-03 15:54:53 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 15:54:53 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-03 15:54:54 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6aaed880, org.springframework.security.web.context.SecurityContextPersistenceFilter@789d45f7, org.springframework.security.web.header.HeaderWriterFilter@7c16cc25, org.springframework.security.web.authentication.logout.LogoutFilter@6c37c36, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6527f68a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c8d20bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c89fdd8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9bd477c, org.springframework.security.web.session.SessionManagementFilter@22db12f6, org.springframework.security.web.access.ExceptionTranslationFilter@571b4bf6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56ece9c]
+2024-06-03 15:54:54 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-06-03 15:54:54 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2024-06-03 15:54:55 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2024-06-03 15:54:55 INFO  org.pharmac.WicketApplication - Started WicketApplication in 6.847 seconds (JVM running for 8.112)
+2024-06-03 15:55:03 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-03 15:55:03 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-03 15:55:03 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 21 ms
+2024-06-03 15:55:03 WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [186] milliseconds.
+2024-06-03 15:55:08 INFO  org.pharmac.views.Home.HomePage - L'utilisateur keadmin s'est connecté
+2024-06-03 15:55:26 ERROR o.a.w.serialize.java.JavaSerializer - Error serializing object class org.pharmac.views.Utilisateurs.ProfilePage [object=[Page class = org.pharmac.views.Utilisateurs.ProfilePage, id = 2, render count = 1]]
+org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream$ObjectCheckException: The object type is not Serializable!
+A problem occurred while checking object with type: java.util.Optional
+Field hierarchy is:
+  2 [class=org.pharmac.views.Utilisateurs.ProfilePage, path=2]
+    private java.lang.Object org.apache.wicket.MarkupContainer.children [class=java.util.ArrayList]
+      java.lang.Object org.apache.wicket.Component.data[write:51][write:52] [class=org.apache.wicket.markup.html.link.Link, path=2:changePassword]
+        final java.util.Optional org.pharmac.views.Utilisateurs.ProfilePage$1.val$utilisateurConnecte [class=java.util.Optional] <----- field that is causing the problem
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:358)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.checkFields(CheckingObjectOutputStream.java:594)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:530)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.access$500(CheckingObjectOutputStream.java:60)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream$1InterceptingObjectOutputStream.replaceObject(CheckingObjectOutputStream.java:486)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1145)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:897)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor83.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1027)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1497)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:494)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.checkFields(CheckingObjectOutputStream.java:594)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:530)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.writeObjectOverride(CheckingObjectOutputStream.java:662)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:345)
+	at org.apache.wicket.serialize.java.JavaSerializer$SerializationCheckerObjectOutputStream.writeObjectOverride(JavaSerializer.java:379)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:345)
+	at org.apache.wicket.serialize.java.JavaSerializer.serialize(JavaSerializer.java:82)
+	at org.apache.wicket.pageStore.AbstractPageStore.serializePage(AbstractPageStore.java:133)
+	at org.apache.wicket.pageStore.DefaultPageStore.createSerializedPage(DefaultPageStore.java:281)
+	at org.apache.wicket.pageStore.DefaultPageStore.storePage(DefaultPageStore.java:61)
+	at org.apache.wicket.pageStore.AsynchronousPageStore$PageSavingRunnable.run(AsynchronousPageStore.java:208)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.NotSerializableException: java.util.Optional
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1185)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1553)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1510)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:897)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor83.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1027)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1497)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1553)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1510)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at org.apache.wicket.serialize.java.JavaSerializer$SerializationCheckerObjectOutputStream.writeObjectOverride(JavaSerializer.java:368)
+	... 7 common frames omitted
+2024-06-03 15:55:26 WARN  o.a.w.pageStore.AbstractPageStore - Page [Page class = org.pharmac.views.Utilisateurs.ProfilePage, id = 2, render count = 1] cannot be serialized. See previous logs for possible reasons.
+2024-06-03 15:55:26 WARN  o.a.w.pageStore.DefaultPageStore - Page [Page class = org.pharmac.views.Utilisateurs.ProfilePage, id = 2, render count = 1] cannot be serialized. See previous logs for possible reasons.
+2024-06-03 15:57:44 ERROR o.a.w.serialize.java.JavaSerializer - Error serializing object class org.pharmac.views.Utilisateurs.ProfilePage [object=[Page class = org.pharmac.views.Utilisateurs.ProfilePage, id = 2, render count = 1]]
+org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream$ObjectCheckException: The object type is not Serializable!
+A problem occurred while checking object with type: java.util.Optional
+Field hierarchy is:
+  2 [class=org.pharmac.views.Utilisateurs.ProfilePage, path=2]
+    private java.lang.Object org.apache.wicket.MarkupContainer.children [class=java.util.ArrayList]
+      java.lang.Object org.apache.wicket.Component.data[write:51][write:52] [class=org.apache.wicket.markup.html.link.Link, path=2:changePassword]
+        final java.util.Optional org.pharmac.views.Utilisateurs.ProfilePage$1.val$utilisateurConnecte [class=java.util.Optional] <----- field that is causing the problem
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:358)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.checkFields(CheckingObjectOutputStream.java:594)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:530)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.access$500(CheckingObjectOutputStream.java:60)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream$1InterceptingObjectOutputStream.replaceObject(CheckingObjectOutputStream.java:486)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1145)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:897)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor83.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1027)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1497)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:494)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.checkFields(CheckingObjectOutputStream.java:594)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:530)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.writeObjectOverride(CheckingObjectOutputStream.java:662)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:345)
+	at org.apache.wicket.serialize.java.JavaSerializer$SerializationCheckerObjectOutputStream.writeObjectOverride(JavaSerializer.java:379)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:345)
+	at org.apache.wicket.serialize.java.JavaSerializer.serialize(JavaSerializer.java:82)
+	at org.apache.wicket.pageStore.AbstractPageStore.serializePage(AbstractPageStore.java:133)
+	at org.apache.wicket.pageStore.DefaultPageStore.createSerializedPage(DefaultPageStore.java:281)
+	at org.apache.wicket.pageStore.DefaultPageStore.storePage(DefaultPageStore.java:61)
+	at org.apache.wicket.pageStore.AsynchronousPageStore$PageSavingRunnable.run(AsynchronousPageStore.java:208)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.NotSerializableException: java.util.Optional
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1185)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1553)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1510)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:897)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor83.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1027)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1497)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1553)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1510)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at org.apache.wicket.serialize.java.JavaSerializer$SerializationCheckerObjectOutputStream.writeObjectOverride(JavaSerializer.java:368)
+	... 7 common frames omitted
+2024-06-03 15:57:44 WARN  o.a.w.pageStore.AbstractPageStore - Page [Page class = org.pharmac.views.Utilisateurs.ProfilePage, id = 2, render count = 1] cannot be serialized. See previous logs for possible reasons.
+2024-06-03 15:57:44 WARN  o.a.w.pageStore.DefaultPageStore - Page [Page class = org.pharmac.views.Utilisateurs.ProfilePage, id = 2, render count = 1] cannot be serialized. See previous logs for possible reasons.
+2024-06-03 16:01:04 INFO  o.p.v.U.AddUtilisateurPage - L'utilisateur new-user1 a été créé par l'utilisateur keadmin
+2024-06-03 16:24:32 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-06-03 16:24:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 16:24:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-03 16:24:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-03 16:24:32 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket core library initializer
+2024-06-03 16:24:32 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket extensions initializer
+2024-06-03 16:24:43 INFO  org.pharmac.WicketApplication - Starting WicketApplication on DESKTOP-RNG8LDO with PID 5256 (started by ASUS TUF in C:\Users\ASUS TUF\Documents\Stage\CAGECFI 2024\Projects\PharmaC)
+2024-06-03 16:24:43 INFO  org.pharmac.WicketApplication - No active profile set, falling back to default profiles: default
+2024-06-03 16:24:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-03 16:24:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 158ms. Found 10 JPA repository interfaces.
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$ceea40e8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' of type [org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration$$EnhancerBySpringCGLIB$$28decfbd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:44 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hypermediaWebMvcConverters' of type [org.springframework.hateoas.config.WebConverters] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:24:45 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2024-06-03 16:24:45 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2024-06-03 16:24:45 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-03 16:24:45 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2024-06-03 16:24:45 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-03 16:24:45 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2217 ms
+2024-06-03 16:24:46 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket core library initializer
+2024-06-03 16:24:46 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket extensions initializer
+2024-06-03 16:24:46 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.markup.MarkupSettingsConfig$$EnhancerBySpringCGLIB$$8f6aa394
+2024-06-03 16:24:46 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.application.ApplicationSettingsConfig$$EnhancerBySpringCGLIB$$b6391658
+2024-06-03 16:24:46 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.pagestore.StoreSettingsConfig$$EnhancerBySpringCGLIB$$9376546b
+2024-06-03 16:24:46 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resources.SpringBootMainClassResourceRegistration$$EnhancerBySpringCGLIB$$bffdfbe8
+2024-06-03 16:24:46 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.exceptions.ExceptionSettingsConfig$$EnhancerBySpringCGLIB$$e6cc19f
+2024-06-03 16:24:46 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.requrestcycle.RequestCycleSettingsConfig$$EnhancerBySpringCGLIB$$54f29724
+2024-06-03 16:24:46 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.csrf.CsrfAttacksPreventionConfig$$EnhancerBySpringCGLIB$$4fd6d3bb
+2024-06-03 16:24:46 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resourcesettings.packageresourceguard.PackageResourceGuardConfig$$EnhancerBySpringCGLIB$$cc6010df
+2024-06-03 16:24:46 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.stuff.annotationscan.AnnotatedMountScannerConfig$$EnhancerBySpringCGLIB$$c33a9cd0
+2024-06-03 16:24:46 INFO  o.a.w.protocol.http.WebApplication - [wicket-filter] Started Wicket version 8.6.1 in DEPLOYMENT mode
+2024-06-03 16:24:46 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-03 16:24:46 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2024-06-03 16:24:46 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-06-03 16:24:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-03 16:24:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-03 16:24:47 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2024-06-03 16:24:50 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-03 16:24:50 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 16:24:50 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-03 16:24:51 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8d5b303, org.springframework.security.web.context.SecurityContextPersistenceFilter@3cc5ca01, org.springframework.security.web.header.HeaderWriterFilter@24ffe853, org.springframework.security.web.authentication.logout.LogoutFilter@39eea4f6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@314407dd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10acfe30, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@285b63eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5984742f, org.springframework.security.web.session.SessionManagementFilter@2f1b8770, org.springframework.security.web.access.ExceptionTranslationFilter@4bb4cc8c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@522221e1]
+2024-06-03 16:24:51 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-06-03 16:24:52 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2024-06-03 16:24:52 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2024-06-03 16:24:52 INFO  org.pharmac.WicketApplication - Started WicketApplication in 9.604 seconds (JVM running for 11.46)
+2024-06-03 16:24:57 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-03 16:24:57 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-03 16:24:57 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 19 ms
+2024-06-03 16:24:58 WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [189] milliseconds.
+2024-06-03 16:25:01 INFO  org.pharmac.views.Home.HomePage - L'utilisateur keadmin s'est connecté
+2024-06-03 16:25:12 ERROR o.a.wicket.DefaultExceptionMapper - Unexpected error occurred
+org.apache.wicket.WicketRuntimeException: Error attaching this container for rendering: [Page class = org.pharmac.views.Utilisateurs.UtilisateursPage, id = 2, render count = 1]
+	at org.apache.wicket.MarkupContainer.onBeforeRenderChildren(MarkupContainer.java:1766)
+	at org.apache.wicket.Component.onBeforeRender(Component.java:3801)
+	at org.apache.wicket.Page.onBeforeRender(Page.java:789)
+	at org.apache.wicket.Component.beforeRender(Component.java:939)
+	at org.apache.wicket.Page.renderPage(Page.java:991)
+	at org.apache.wicket.request.handler.render.WebPageRenderer.renderPage(WebPageRenderer.java:124)
+	at org.apache.wicket.request.handler.render.WebPageRenderer.respond(WebPageRenderer.java:236)
+	at org.apache.wicket.core.request.handler.RenderPageRequestHandler.respond(RenderPageRequestHandler.java:202)
+	at org.apache.wicket.request.cycle.RequestCycle$HandlerExecutor.respond(RequestCycle.java:914)
+	at org.apache.wicket.request.RequestHandlerExecutor.execute(RequestHandlerExecutor.java:65)
+	at org.apache.wicket.request.cycle.RequestCycle.execute(RequestCycle.java:282)
+	at org.apache.wicket.request.cycle.RequestCycle.processRequest(RequestCycle.java:253)
+	at org.apache.wicket.request.cycle.RequestCycle.processRequestAndDetach(RequestCycle.java:221)
+	at org.apache.wicket.protocol.http.WicketFilter.processRequestCycle(WicketFilter.java:275)
+	at org.apache.wicket.protocol.http.WicketFilter.processRequest(WicketFilter.java:206)
+	at org.apache.wicket.protocol.http.WicketFilter.doFilter(WicketFilter.java:299)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException: null
+	at org.pharmac.views.Utilisateurs.UtilisateursPage$2.populateItem(UtilisateursPage.java:97)
+	at org.apache.wicket.markup.html.list.ListView.onPopulate(ListView.java:523)
+	at org.apache.wicket.markup.repeater.AbstractRepeater.onBeforeRender(AbstractRepeater.java:124)
+	at org.apache.wicket.Component.beforeRender(Component.java:939)
+	at org.apache.wicket.MarkupContainer.onBeforeRenderChildren(MarkupContainer.java:1754)
+	... 78 common frames omitted
+2024-06-03 16:29:14 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-06-03 16:29:14 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 16:29:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-03 16:29:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-03 16:29:14 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket core library initializer
+2024-06-03 16:29:14 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket extensions initializer
+2024-06-03 16:29:24 INFO  org.pharmac.WicketApplication - Starting WicketApplication on DESKTOP-RNG8LDO with PID 17928 (started by ASUS TUF in C:\Users\ASUS TUF\Documents\Stage\CAGECFI 2024\Projects\PharmaC)
+2024-06-03 16:29:24 INFO  org.pharmac.WicketApplication - No active profile set, falling back to default profiles: default
+2024-06-03 16:29:25 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-03 16:29:25 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 151ms. Found 10 JPA repository interfaces.
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$f5cbc1cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' of type [org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration$$EnhancerBySpringCGLIB$$4fc050a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hypermediaWebMvcConverters' of type [org.springframework.hateoas.config.WebConverters] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 16:29:25 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2024-06-03 16:29:26 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2024-06-03 16:29:26 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-03 16:29:26 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2024-06-03 16:29:26 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-03 16:29:26 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1949 ms
+2024-06-03 16:29:26 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket core library initializer
+2024-06-03 16:29:26 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket extensions initializer
+2024-06-03 16:29:26 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.markup.MarkupSettingsConfig$$EnhancerBySpringCGLIB$$b64c247b
+2024-06-03 16:29:26 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.application.ApplicationSettingsConfig$$EnhancerBySpringCGLIB$$dd1a973f
+2024-06-03 16:29:26 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.pagestore.StoreSettingsConfig$$EnhancerBySpringCGLIB$$ba57d552
+2024-06-03 16:29:26 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resources.SpringBootMainClassResourceRegistration$$EnhancerBySpringCGLIB$$e6df7ccf
+2024-06-03 16:29:26 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.exceptions.ExceptionSettingsConfig$$EnhancerBySpringCGLIB$$354e4286
+2024-06-03 16:29:26 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.requrestcycle.RequestCycleSettingsConfig$$EnhancerBySpringCGLIB$$7bd4180b
+2024-06-03 16:29:26 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.csrf.CsrfAttacksPreventionConfig$$EnhancerBySpringCGLIB$$76b854a2
+2024-06-03 16:29:26 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resourcesettings.packageresourceguard.PackageResourceGuardConfig$$EnhancerBySpringCGLIB$$f34191c6
+2024-06-03 16:29:26 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.stuff.annotationscan.AnnotatedMountScannerConfig$$EnhancerBySpringCGLIB$$ea1c1db7
+2024-06-03 16:29:26 INFO  o.a.w.protocol.http.WebApplication - [wicket-filter] Started Wicket version 8.6.1 in DEPLOYMENT mode
+2024-06-03 16:29:26 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-03 16:29:26 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2024-06-03 16:29:27 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-06-03 16:29:27 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-03 16:29:27 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-03 16:29:27 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2024-06-03 16:29:30 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-03 16:29:30 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 16:29:31 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-03 16:29:31 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e1535e0, org.springframework.security.web.context.SecurityContextPersistenceFilter@b1d7b09, org.springframework.security.web.header.HeaderWriterFilter@7a4199e5, org.springframework.security.web.authentication.logout.LogoutFilter@58dd1d0c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6ebf5f26, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7fe40b9f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@326d39fd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c27be1d, org.springframework.security.web.session.SessionManagementFilter@3431cb1f, org.springframework.security.web.access.ExceptionTranslationFilter@309b6768, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@492e9e87]
+2024-06-03 16:29:32 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-06-03 16:29:32 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2024-06-03 16:29:32 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2024-06-03 16:29:32 INFO  org.pharmac.WicketApplication - Started WicketApplication in 8.765 seconds (JVM running for 9.974)
+2024-06-03 16:29:38 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-03 16:29:38 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-03 16:29:38 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 22 ms
+2024-06-03 16:29:38 WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [120] milliseconds.
+2024-06-03 16:29:43 INFO  org.pharmac.views.Home.HomePage - L'utilisateur keadmin s'est connecté
+2024-06-03 16:29:49 ERROR o.a.w.serialize.java.JavaSerializer - Error serializing object class org.pharmac.views.Utilisateurs.ProfilePage [object=[Page class = org.pharmac.views.Utilisateurs.ProfilePage, id = 2, render count = 1]]
+org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream$ObjectCheckException: The object type is not Serializable!
+A problem occurred while checking object with type: java.util.Optional
+Field hierarchy is:
+  2 [class=org.pharmac.views.Utilisateurs.ProfilePage, path=2]
+    private java.lang.Object org.apache.wicket.MarkupContainer.children [class=java.util.ArrayList]
+      java.lang.Object org.apache.wicket.Component.data[write:51][write:52] [class=org.apache.wicket.markup.html.link.Link, path=2:changePassword]
+        final java.util.Optional org.pharmac.views.Utilisateurs.ProfilePage$1.val$utilisateurConnecte [class=java.util.Optional] <----- field that is causing the problem
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:358)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.checkFields(CheckingObjectOutputStream.java:594)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:530)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.access$500(CheckingObjectOutputStream.java:60)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream$1InterceptingObjectOutputStream.replaceObject(CheckingObjectOutputStream.java:486)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1145)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:897)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor83.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1027)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1497)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:494)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.checkFields(CheckingObjectOutputStream.java:594)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:530)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.writeObjectOverride(CheckingObjectOutputStream.java:662)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:345)
+	at org.apache.wicket.serialize.java.JavaSerializer$SerializationCheckerObjectOutputStream.writeObjectOverride(JavaSerializer.java:379)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:345)
+	at org.apache.wicket.serialize.java.JavaSerializer.serialize(JavaSerializer.java:82)
+	at org.apache.wicket.pageStore.AbstractPageStore.serializePage(AbstractPageStore.java:133)
+	at org.apache.wicket.pageStore.DefaultPageStore.createSerializedPage(DefaultPageStore.java:281)
+	at org.apache.wicket.pageStore.DefaultPageStore.storePage(DefaultPageStore.java:61)
+	at org.apache.wicket.pageStore.AsynchronousPageStore$PageSavingRunnable.run(AsynchronousPageStore.java:208)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.NotSerializableException: java.util.Optional
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1185)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1553)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1510)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:897)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor83.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1027)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1497)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1553)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1510)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at org.apache.wicket.serialize.java.JavaSerializer$SerializationCheckerObjectOutputStream.writeObjectOverride(JavaSerializer.java:368)
+	... 7 common frames omitted
+2024-06-03 16:29:49 WARN  o.a.w.pageStore.AbstractPageStore - Page [Page class = org.pharmac.views.Utilisateurs.ProfilePage, id = 2, render count = 1] cannot be serialized. See previous logs for possible reasons.
+2024-06-03 16:29:49 WARN  o.a.w.pageStore.DefaultPageStore - Page [Page class = org.pharmac.views.Utilisateurs.ProfilePage, id = 2, render count = 1] cannot be serialized. See previous logs for possible reasons.
+2024-06-03 16:29:56 ERROR o.a.w.serialize.java.JavaSerializer - Error serializing object class org.pharmac.views.Utilisateurs.ProfilePage [object=[Page class = org.pharmac.views.Utilisateurs.ProfilePage, id = 2, render count = 1]]
+org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream$ObjectCheckException: The object type is not Serializable!
+A problem occurred while checking object with type: java.util.Optional
+Field hierarchy is:
+  2 [class=org.pharmac.views.Utilisateurs.ProfilePage, path=2]
+    private java.lang.Object org.apache.wicket.MarkupContainer.children [class=java.util.ArrayList]
+      java.lang.Object org.apache.wicket.Component.data[write:51][write:52] [class=org.apache.wicket.markup.html.link.Link, path=2:changePassword]
+        final java.util.Optional org.pharmac.views.Utilisateurs.ProfilePage$1.val$utilisateurConnecte [class=java.util.Optional] <----- field that is causing the problem
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:358)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.checkFields(CheckingObjectOutputStream.java:594)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:530)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.access$500(CheckingObjectOutputStream.java:60)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream$1InterceptingObjectOutputStream.replaceObject(CheckingObjectOutputStream.java:486)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1145)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:897)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor83.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1027)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1497)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:494)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.checkFields(CheckingObjectOutputStream.java:594)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.internalCheck(CheckingObjectOutputStream.java:530)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.check(CheckingObjectOutputStream.java:341)
+	at org.apache.wicket.core.util.objects.checker.CheckingObjectOutputStream.writeObjectOverride(CheckingObjectOutputStream.java:662)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:345)
+	at org.apache.wicket.serialize.java.JavaSerializer$SerializationCheckerObjectOutputStream.writeObjectOverride(JavaSerializer.java:379)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:345)
+	at org.apache.wicket.serialize.java.JavaSerializer.serialize(JavaSerializer.java:82)
+	at org.apache.wicket.pageStore.AbstractPageStore.serializePage(AbstractPageStore.java:133)
+	at org.apache.wicket.pageStore.DefaultPageStore.createSerializedPage(DefaultPageStore.java:281)
+	at org.apache.wicket.pageStore.DefaultPageStore.storePage(DefaultPageStore.java:61)
+	at org.apache.wicket.pageStore.AsynchronousPageStore$PageSavingRunnable.run(AsynchronousPageStore.java:208)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.NotSerializableException: java.util.Optional
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1185)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1553)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1510)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:897)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor83.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1027)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1497)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1553)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1510)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349)
+	at org.apache.wicket.serialize.java.JavaSerializer$SerializationCheckerObjectOutputStream.writeObjectOverride(JavaSerializer.java:368)
+	... 7 common frames omitted
+2024-06-03 16:29:56 WARN  o.a.w.pageStore.AbstractPageStore - Page [Page class = org.pharmac.views.Utilisateurs.ProfilePage, id = 2, render count = 1] cannot be serialized. See previous logs for possible reasons.
+2024-06-03 16:29:56 WARN  o.a.w.pageStore.DefaultPageStore - Page [Page class = org.pharmac.views.Utilisateurs.ProfilePage, id = 2, render count = 1] cannot be serialized. See previous logs for possible reasons.
+2024-06-03 16:30:13 WARN  org.apache.wicket.Component - Markup id set on a component that renders its body only. Markup id: id1f, component id: group.
+2024-06-03 16:30:18 INFO  o.p.v.U.AffectationDroitsPage - L'utilisateur new-user1 a désormais les rôles : [Role(id=15, roleName=VENDEUR, roleLibelle=Vendeur, roleDescription=null)]
+2024-06-03 17:44:13 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-06-03 17:44:13 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 17:44:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-03 17:44:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-03 17:44:13 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket core library initializer
+2024-06-03 17:44:13 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket extensions initializer
+2024-06-03 17:44:19 INFO  org.pharmac.WicketApplication - Starting WicketApplication on DESKTOP-RNG8LDO with PID 19664 (started by ASUS TUF in C:\Users\ASUS TUF\Documents\Stage\CAGECFI 2024\Projects\PharmaC)
+2024-06-03 17:44:19 INFO  org.pharmac.WicketApplication - No active profile set, falling back to default profiles: default
+2024-06-03 17:44:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-03 17:44:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97ms. Found 10 JPA repository interfaces.
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$d2e3988] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' of type [org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration$$EnhancerBySpringCGLIB$$6722c85d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hypermediaWebMvcConverters' of type [org.springframework.hateoas.config.WebConverters] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:44:20 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2024-06-03 17:44:20 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2024-06-03 17:44:20 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-03 17:44:20 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2024-06-03 17:44:20 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-03 17:44:20 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1260 ms
+2024-06-03 17:44:21 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket core library initializer
+2024-06-03 17:44:21 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket extensions initializer
+2024-06-03 17:44:21 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.markup.MarkupSettingsConfig$$EnhancerBySpringCGLIB$$cdae9c34
+2024-06-03 17:44:21 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.application.ApplicationSettingsConfig$$EnhancerBySpringCGLIB$$f47d0ef8
+2024-06-03 17:44:21 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.pagestore.StoreSettingsConfig$$EnhancerBySpringCGLIB$$d1ba4d0b
+2024-06-03 17:44:21 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resources.SpringBootMainClassResourceRegistration$$EnhancerBySpringCGLIB$$fe41f488
+2024-06-03 17:44:21 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.exceptions.ExceptionSettingsConfig$$EnhancerBySpringCGLIB$$4cb0ba3f
+2024-06-03 17:44:21 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.requrestcycle.RequestCycleSettingsConfig$$EnhancerBySpringCGLIB$$93368fc4
+2024-06-03 17:44:21 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.csrf.CsrfAttacksPreventionConfig$$EnhancerBySpringCGLIB$$8e1acc5b
+2024-06-03 17:44:21 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resourcesettings.packageresourceguard.PackageResourceGuardConfig$$EnhancerBySpringCGLIB$$aa4097f
+2024-06-03 17:44:21 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.stuff.annotationscan.AnnotatedMountScannerConfig$$EnhancerBySpringCGLIB$$17e9570
+2024-06-03 17:44:21 INFO  o.a.w.protocol.http.WebApplication - [wicket-filter] Started Wicket version 8.6.1 in DEPLOYMENT mode
+2024-06-03 17:44:21 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-03 17:44:21 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2024-06-03 17:44:21 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-06-03 17:44:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-03 17:44:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-03 17:44:21 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2024-06-03 17:44:22 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-03 17:44:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 17:44:22 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-03 17:44:23 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3203ffa3, org.springframework.security.web.context.SecurityContextPersistenceFilter@5efa05f9, org.springframework.security.web.header.HeaderWriterFilter@62d818c6, org.springframework.security.web.authentication.logout.LogoutFilter@14ecd835, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2553fbd0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@204beb58, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32a29361, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49231d79, org.springframework.security.web.session.SessionManagementFilter@3a744e32, org.springframework.security.web.access.ExceptionTranslationFilter@6a9b8f33, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7927209f]
+2024-06-03 17:44:23 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-06-03 17:44:23 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2024-06-03 17:44:23 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2024-06-03 17:44:23 INFO  org.pharmac.WicketApplication - Started WicketApplication in 4.292 seconds (JVM running for 5.197)
+2024-06-03 17:44:29 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-03 17:44:29 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-03 17:44:29 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2024-06-03 17:44:32 INFO  org.pharmac.views.Home.HomePage - L'utilisateur keadmin s'est connecté
+2024-06-03 17:44:36 ERROR o.a.wicket.DefaultExceptionMapper - Unexpected error occurred
+org.apache.wicket.markup.MarkupException: Component [nbreComprimes] (path = [2:produit-form:nbreComprimes]) must be applied to a tag with [type] attribute matching any of [number], not [text]
+	at org.apache.wicket.markup.MarkupStream.throwMarkupException(MarkupStream.java:534)
+	at org.apache.wicket.Component.checkComponentTagAttribute(Component.java:3529)
+	at org.apache.wicket.markup.html.form.TextField.onComponentTag(TextField.java:98)
+	at org.apache.wicket.markup.html.form.NumberTextField.onComponentTag(NumberTextField.java:235)
+	at org.apache.wicket.Component.internalRenderComponent(Component.java:2432)
+	at org.apache.wicket.MarkupContainer.onRender(MarkupContainer.java:1593)
+	at org.apache.wicket.Component.internalRender(Component.java:2296)
+	at org.apache.wicket.Component.render(Component.java:2227)
+	at org.apache.wicket.MarkupContainer.renderNext(MarkupContainer.java:1454)
+	at org.apache.wicket.MarkupContainer.renderAll(MarkupContainer.java:1654)
+	at org.apache.wicket.MarkupContainer.renderComponentTagBody(MarkupContainer.java:1629)
+	at org.apache.wicket.MarkupContainer.onComponentTagBody(MarkupContainer.java:1587)
+	at org.apache.wicket.markup.html.form.Form.onComponentTagBody(Form.java:1708)
+	at org.apache.wicket.markup.html.panel.DefaultMarkupSourcingStrategy.onComponentTagBody(DefaultMarkupSourcingStrategy.java:70)
+	at org.apache.wicket.Component.internalRenderComponent(Component.java:2491)
+	at org.apache.wicket.MarkupContainer.onRender(MarkupContainer.java:1593)
+	at org.apache.wicket.Component.internalRender(Component.java:2296)
+	at org.apache.wicket.Component.render(Component.java:2227)
+	at org.apache.wicket.MarkupContainer.renderNext(MarkupContainer.java:1454)
+	at org.apache.wicket.MarkupContainer.renderAll(MarkupContainer.java:1654)
+	at org.apache.wicket.Page.onRender(Page.java:858)
+	at org.apache.wicket.markup.html.WebPage.onRender(WebPage.java:126)
+	at org.apache.wicket.Component.internalRender(Component.java:2296)
+	at org.apache.wicket.Component.render(Component.java:2227)
+	at org.apache.wicket.Page.renderPage(Page.java:998)
+	at org.apache.wicket.request.handler.render.WebPageRenderer.renderPage(WebPageRenderer.java:124)
+	at org.apache.wicket.request.handler.render.WebPageRenderer.respond(WebPageRenderer.java:236)
+	at org.apache.wicket.core.request.handler.RenderPageRequestHandler.respond(RenderPageRequestHandler.java:202)
+	at org.apache.wicket.request.cycle.RequestCycle$HandlerExecutor.respond(RequestCycle.java:914)
+	at org.apache.wicket.request.RequestHandlerExecutor.execute(RequestHandlerExecutor.java:65)
+	at org.apache.wicket.request.cycle.RequestCycle.execute(RequestCycle.java:282)
+	at org.apache.wicket.request.cycle.RequestCycle.processRequest(RequestCycle.java:253)
+	at org.apache.wicket.request.cycle.RequestCycle.processRequestAndDetach(RequestCycle.java:221)
+	at org.apache.wicket.protocol.http.WicketFilter.processRequestCycle(WicketFilter.java:275)
+	at org.apache.wicket.protocol.http.WicketFilter.processRequest(WicketFilter.java:206)
+	at org.apache.wicket.protocol.http.WicketFilter.doFilter(WicketFilter.java:299)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2024-06-03 17:45:06 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-06-03 17:45:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 17:45:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-03 17:45:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-03 17:45:07 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket core library initializer
+2024-06-03 17:45:07 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket extensions initializer
+2024-06-03 17:45:11 INFO  org.pharmac.WicketApplication - Starting WicketApplication on DESKTOP-RNG8LDO with PID 18072 (started by ASUS TUF in C:\Users\ASUS TUF\Documents\Stage\CAGECFI 2024\Projects\PharmaC)
+2024-06-03 17:45:11 INFO  org.pharmac.WicketApplication - No active profile set, falling back to default profiles: default
+2024-06-03 17:45:12 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-03 17:45:12 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100ms. Found 10 JPA repository interfaces.
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$cb5ffcda] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' of type [org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration$$EnhancerBySpringCGLIB$$25548baf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hypermediaWebMvcConverters' of type [org.springframework.hateoas.config.WebConverters] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:45:12 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2024-06-03 17:45:12 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2024-06-03 17:45:12 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-03 17:45:12 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2024-06-03 17:45:12 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-03 17:45:12 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1293 ms
+2024-06-03 17:45:12 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket core library initializer
+2024-06-03 17:45:12 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket extensions initializer
+2024-06-03 17:45:12 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.markup.MarkupSettingsConfig$$EnhancerBySpringCGLIB$$8be05f86
+2024-06-03 17:45:12 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.application.ApplicationSettingsConfig$$EnhancerBySpringCGLIB$$b2aed24a
+2024-06-03 17:45:12 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.pagestore.StoreSettingsConfig$$EnhancerBySpringCGLIB$$8fec105d
+2024-06-03 17:45:12 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resources.SpringBootMainClassResourceRegistration$$EnhancerBySpringCGLIB$$bc73b7da
+2024-06-03 17:45:12 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.exceptions.ExceptionSettingsConfig$$EnhancerBySpringCGLIB$$ae27d91
+2024-06-03 17:45:12 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.requrestcycle.RequestCycleSettingsConfig$$EnhancerBySpringCGLIB$$51685316
+2024-06-03 17:45:12 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.csrf.CsrfAttacksPreventionConfig$$EnhancerBySpringCGLIB$$4c4c8fad
+2024-06-03 17:45:12 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resourcesettings.packageresourceguard.PackageResourceGuardConfig$$EnhancerBySpringCGLIB$$c8d5ccd1
+2024-06-03 17:45:12 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.stuff.annotationscan.AnnotatedMountScannerConfig$$EnhancerBySpringCGLIB$$bfb058c2
+2024-06-03 17:45:13 INFO  o.a.w.protocol.http.WebApplication - [wicket-filter] Started Wicket version 8.6.1 in DEPLOYMENT mode
+2024-06-03 17:45:13 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-03 17:45:13 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2024-06-03 17:45:13 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-06-03 17:45:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-03 17:45:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-03 17:45:13 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2024-06-03 17:45:14 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-03 17:45:14 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 17:45:14 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-03 17:45:14 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73ab649f, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e8426aa, org.springframework.security.web.header.HeaderWriterFilter@4af0ae2c, org.springframework.security.web.authentication.logout.LogoutFilter@41db6e4b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@106f0051, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a5a26b7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ce7ab6f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@234dfc8e, org.springframework.security.web.session.SessionManagementFilter@32a29361, org.springframework.security.web.access.ExceptionTranslationFilter@2e10f765, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6a35cccf]
+2024-06-03 17:45:14 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-06-03 17:45:15 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2024-06-03 17:45:15 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2024-06-03 17:45:15 INFO  org.pharmac.WicketApplication - Started WicketApplication in 4.124 seconds (JVM running for 5.038)
+2024-06-03 17:45:20 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-03 17:45:20 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-03 17:45:20 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2024-06-03 17:45:23 INFO  org.pharmac.views.Home.HomePage - L'utilisateur keadmin s'est connecté
+2024-06-03 17:58:09 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-06-03 17:58:09 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 17:58:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-03 17:58:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-03 17:58:09 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket core library initializer
+2024-06-03 17:58:09 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket extensions initializer
+2024-06-03 17:58:17 INFO  org.pharmac.WicketApplication - Starting WicketApplication on DESKTOP-RNG8LDO with PID 27356 (started by ASUS TUF in C:\Users\ASUS TUF\Documents\Stage\CAGECFI 2024\Projects\PharmaC)
+2024-06-03 17:58:17 INFO  org.pharmac.WicketApplication - No active profile set, falling back to default profiles: default
+2024-06-03 17:58:18 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-03 17:58:18 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 109ms. Found 10 JPA repository interfaces.
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$c310bbc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration' of type [org.springframework.hateoas.mediatype.hal.HalMediaTypeConfiguration$$EnhancerBySpringCGLIB$$1d054a9e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hypermediaWebMvcConverters' of type [org.springframework.hateoas.config.WebConverters] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-06-03 17:58:18 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8100 (http)
+2024-06-03 17:58:18 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2024-06-03 17:58:18 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-03 17:58:18 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2024-06-03 17:58:18 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-03 17:58:18 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1316 ms
+2024-06-03 17:58:19 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket core library initializer
+2024-06-03 17:58:19 INFO  org.apache.wicket.Application - [wicket-filter] init: Wicket extensions initializer
+2024-06-03 17:58:19 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.markup.MarkupSettingsConfig$$EnhancerBySpringCGLIB$$83911e75
+2024-06-03 17:58:19 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.application.ApplicationSettingsConfig$$EnhancerBySpringCGLIB$$aa5f9139
+2024-06-03 17:58:19 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.pagestore.StoreSettingsConfig$$EnhancerBySpringCGLIB$$879ccf4c
+2024-06-03 17:58:19 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resources.SpringBootMainClassResourceRegistration$$EnhancerBySpringCGLIB$$b42476c9
+2024-06-03 17:58:19 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.exceptions.ExceptionSettingsConfig$$EnhancerBySpringCGLIB$$2933c80
+2024-06-03 17:58:19 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.settings.requrestcycle.RequestCycleSettingsConfig$$EnhancerBySpringCGLIB$$49191205
+2024-06-03 17:58:19 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.csrf.CsrfAttacksPreventionConfig$$EnhancerBySpringCGLIB$$43fd4e9c
+2024-06-03 17:58:19 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.core.resourcesettings.packageresourceguard.PackageResourceGuardConfig$$EnhancerBySpringCGLIB$$c0868bc0
+2024-06-03 17:58:19 INFO  c.g.w.s.b.s.a.WicketBootStandardWebApplication - init-config: com.giffing.wicket.spring.boot.starter.configuration.extensions.stuff.annotationscan.AnnotatedMountScannerConfig$$EnhancerBySpringCGLIB$$b76117b1
+2024-06-03 17:58:19 INFO  o.a.w.protocol.http.WebApplication - [wicket-filter] Started Wicket version 8.6.1 in DEPLOYMENT mode
+2024-06-03 17:58:19 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-03 17:58:19 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2024-06-03 17:58:19 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-06-03 17:58:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-03 17:58:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-03 17:58:19 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2024-06-03 17:58:20 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-03 17:58:20 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 17:58:21 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-03 17:58:21 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b2db8bc, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ca9ec77, org.springframework.security.web.header.HeaderWriterFilter@2d0ce8a1, org.springframework.security.web.authentication.logout.LogoutFilter@77c1a7ce, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@54972f9a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ade99bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77b0ff24, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c0ec502, org.springframework.security.web.session.SessionManagementFilter@2c9430c6, org.springframework.security.web.access.ExceptionTranslationFilter@1c4a8c93, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4f3672eb]
+2024-06-03 17:58:21 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-06-03 17:58:22 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2024-06-03 17:58:22 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8100 (http) with context path ''
+2024-06-03 17:58:22 INFO  org.pharmac.WicketApplication - Started WicketApplication in 4.771 seconds (JVM running for 5.594)
+2024-06-03 18:04:30 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-03 18:04:30 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-03 18:04:30 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 27 ms
+2024-06-03 18:06:00 WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [124] milliseconds.
+2024-06-03 18:06:12 INFO  org.pharmac.views.Home.HomePage - L'utilisateur keadmin s'est connecté
+2024-06-03 18:11:47 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-06-03 18:11:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-03 18:11:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-03 18:11:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-03 18:11:47 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket core library initializer
+2024-06-03 18:11:47 INFO  org.apache.wicket.Application - [wicket-filter] destroy: Wicket extensions initializer

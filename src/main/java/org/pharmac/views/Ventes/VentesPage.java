@@ -1,7 +1,6 @@
 package org.pharmac.views.Ventes;
 
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
@@ -14,6 +13,8 @@ import org.apache.wicket.util.resource.AbstractResourceStreamWriter;
 import org.apache.wicket.util.resource.IResourceStream;
 import org.apache.wicket.util.time.Duration;
 import org.pharmac.models.Vente;
+import org.pharmac.services.DetailVenteService;
+import org.pharmac.services.PharmacySettingsService;
 import org.pharmac.services.VenteService;
 import org.pharmac.views.components.BasePage;
 import org.wicketstuff.annotation.mount.MountPath;
@@ -23,11 +24,17 @@ import java.io.OutputStream;
 import java.util.Collections;
 import java.util.List;
 
-@MountPath("ventes")
+@MountPath("vendeur/ventes")
 public class VentesPage extends BasePage {
 
 	@SpringBean
 	private VenteService venteService;
+
+	@SpringBean
+	private DetailVenteService detailVenteService;
+
+	@SpringBean
+	private PharmacySettingsService pharmacySettingsService;
 
 	public VentesPage() {
 		super();
@@ -56,6 +63,8 @@ public class VentesPage extends BasePage {
 				Vente venteRow = item.getModelObject();
 				item.add(new Label("idVente", venteRow.getIdV()));
 				item.add(new Label("dateVente", venteRow.getDateVente()));
+				String userToDisplay = venteRow.getUtilisateur() != null ? venteRow.getUtilisateur().getNomU() + " " + venteRow.getUtilisateur().getPrenomU() : "N/A";
+				item.add(new Label("realiseePar", userToDisplay));
 				item.add(new Label("total", venteRow.getTotal()));
 				item.add(new Link<>("print") {
 					@Override
@@ -64,7 +73,7 @@ public class VentesPage extends BasePage {
 							@Override
 							public void write(OutputStream output) throws IOException {
 								try {
-									InvoicePDFPrinter invoicePrinter = new InvoicePDFPrinter(venteRow);
+									InvoicePDFPrinter invoicePrinter = new InvoicePDFPrinter(venteRow, pharmacySettingsService, detailVenteService);
 									invoicePrinter.export(output);
 								} catch (Exception e) {
 									throw new RuntimeException(e);

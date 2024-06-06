@@ -27,7 +27,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-@MountPath("edit-stock")
+@MountPath("gestionnaire/edit-stock")
 public class EditStocksPage extends BasePage {
 
 	@SpringBean

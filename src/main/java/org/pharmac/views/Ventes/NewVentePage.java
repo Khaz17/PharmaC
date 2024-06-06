@@ -15,7 +15,7 @@ import org.wicketstuff.annotation.mount.MountPath;
 import java.util.ArrayList;
 import java.util.List;
 
-@MountPath("new-vente")
+@MountPath("vendeur/new-vente")
 public class NewVentePage extends BasePage {
 
 	private Vente vente;

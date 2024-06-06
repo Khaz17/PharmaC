@@ -17,6 +17,10 @@ import org.pharmac.views.Categories.CategoriesPage;
 import org.pharmac.views.Fournisseurs.FournisseursPage;
 import org.pharmac.views.Home.HomePage;
 import org.pharmac.views.Produits.ProduitsPage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -38,10 +42,14 @@ public class ConfirmDeletePage extends WebPage {
 	private transient Optional<Produit> produitToDelete;
 	private WebPage next;
 
+	private static final Logger logger = LoggerFactory.getLogger(ProduitsPage.class);
+
 	public ConfirmDeletePage(PageParameters parameters) {
 		if (parameters.isEmpty()) {
 			setResponsePage(FournisseursPage.class);
 		}
+
+		String username = SecurityContextHolder.getContext().getAuthentication().getName();
 
 		StringValue elementTypeValue = parameters.get("elementType");
 		StringValue elementIdValue = parameters.get("elementId");
@@ -77,6 +85,7 @@ public class ConfirmDeletePage extends WebPage {
 						}
 						Object[] parametres = {Long.parseLong(elementId)};
 						Object resultat = methode.invoke(objet, parametres);
+						logger.warn("L'utilisateur {} a supprimé le/la {} d'id {}", username, elementType.toLowerCase(), elementId);
 					} catch (ClassNotFoundException e) {
 						System.err.println("Classe non trouvée : " + e.getMessage());
 					} catch (NoSuchMethodException e) {

@@ -16,7 +16,16 @@ public class Produit implements Serializable {
 
 	private String dci;
 
+	private String formeGalenique;
+
+	private String dosage;
+
+	private String nomComplet;
+
 	private String voieAdministration;
+
+	@Column(nullable = true)
+	private Integer nbreComprimes;
 
 	@Column(nullable = false)
 	private double prixUnitaire;

@@ -20,8 +20,14 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.pharmac.models.DetailVente;
 import org.pharmac.models.Produit;
+import org.pharmac.models.Utilisateur;
 import org.pharmac.models.Vente;
+import org.pharmac.services.UtilisateurService;
 import org.pharmac.services.VenteService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -33,6 +39,14 @@ public class ConfirmationPanel extends Panel {
 
 	@SpringBean
 	private VenteService venteService;
+
+	@SpringBean
+	private UtilisateurService utilisateurService;
+
+	private static final Logger logger = LoggerFactory.getLogger(ConfirmationPanel.class);
+
+	String username = SecurityContextHolder.getContext().getAuthentication().getName();
+	Utilisateur utilisateurConnecte = utilisateurService.getUtilisateurByUsername(username).get();
 
 	public ConfirmationPanel(String id, List<Produit> selectedProduits) {
 		super(id);
@@ -110,12 +124,23 @@ public class ConfirmationPanel extends Panel {
 
 			@Override
 			public void onClick(AjaxRequestTarget target) {
+//				Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//
+//				if (principal instanceof UserDetails) {
+//					String username = ((UserDetails) principal).getUsername();
+//					Utilisateur utilisateur = utilisateurService.getUtilisateurByUsername(username).get();
+//
+//				} else {
+//					System.out.println("Le principal n'est pas une instance d'UserDetails");
+//				}
+				vente.setUtilisateur(utilisateurConnecte);
 				vente.setDetailVenteList(detailVenteList);
 				vente.setDateVente(LocalDateTime.now());
 				vente.setTotal(detailVenteList.stream().mapToDouble(detail -> detail.getPrixUnitaire() * detail.getQuantiteVendue()).sum());
 //				System.out.println(vente);
 				venteService.saveVente(vente);
 				Vente newVente = venteService.getNewVente();
+				logger.info("La vente {} a été réalisée par l'utilisateur {}", newVente.getIdV(), newVente.getUtilisateur().getNomU());
 
 				PageParameters parameters = new PageParameters();
 				parameters.add("idVente", newVente.getIdV());

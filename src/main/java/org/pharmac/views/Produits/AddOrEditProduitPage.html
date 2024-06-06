@@ -2,6 +2,47 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
 <head>
     <title>PharmaC - Nouveau produit</title>
+<!--    <wicket:head>-->
+        <style>
+            /*div.wicket-aa {*/
+            /*    font-family: "Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana;*/
+            /*    font-size: 12px;*/
+            /*    background-color: white;*/
+            /*    border-width: 1px;*/
+            /*    border-color: #cccccc;*/
+            /*    border-style: solid;*/
+            /*    padding: 2px;*/
+            /*    margin: 1px 0 0 0;*/
+            /*    text-align:left;*/
+            /*}*/
+            /*div.wicket-aa ul { list-style:none; padding: 2px; margin:0; }*/
+            /*div.wicket-aa ul li.selected { background-color: #FFFF00; padding: 2px; margin:0; }*/
+
+            /* Add this to your CSS file */
+            .auto-complete-dropdown {
+                border: 1px solid #ccc;
+                max-height: 200px;
+                overflow-y: auto;
+                background-color: #fff;
+            }
+
+            .auto-complete-dropdown-item {
+                padding: 8px;
+                cursor: pointer;
+                background-color: #ffffff; /* Ensure background is white */
+            }
+
+            .auto-complete-dropdown-item:hover,
+            .auto-complete-dropdown-item.active {
+                background-color: #f0f0f0;
+            }
+
+            .auto-complete-dropdown-item strong {
+                color: #007bff;
+            }
+
+        </style>
+<!--    </wicket:head>-->
 </head>
 <body>
 <wicket:extend>
@@ -22,7 +63,8 @@
         <div class="card card-bordered">
             <div class="card-inner-group">
                 <div class="card-inner">
-                    <form action="#" wicket:id="produit-form">
+                    <div wicket:id="feedback"></div>
+                    <form action="#" onsubmit="return validateAndNormalizeDosage()" wicket:id="produit-form">
                         <div class="row g-3 align-center">
                             <div class="col-xxl-3 col-md-6">
                                 <div class="form-group">
@@ -34,6 +76,24 @@
                                 <div class="form-group">
                                     <label class="form-label" for="dci">DCI</label>
                                     <input type="text" class="form-control" wicket:id="dci" id="dci" placeholder="Dénomination commune internationale du produit">
+                                </div>
+                            </div><!--col-->
+                            <div class="col-xxl-3 col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="dci">Forme galénique</label>
+                                    <input type="text" class="form-control" wicket:id="formeGalenique" onkeydown="handleKeyDown(event)" autocomplete="off" placeholder="Forme galénique du produit">
+                                </div>
+                            </div><!--col-->
+                            <div class="col-xxl-3 col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label" for="dci">Dosage</label>
+                                    <input type="text" class="form-control" id="dosageInput" wicket:id="dosage" placeholder="Dosage" autocomplete="off">
+                                </div>
+                            </div><!--col-->
+                            <div class="col-xxl-3 col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label" for="dci">Nombre de comprimés</label>
+                                    <input type="number" class="form-control" wicket:id="nbreComprimes"  placeholder="... dans une boîte">
                                 </div>
                             </div><!--col-->
 
@@ -51,7 +111,9 @@
                                 <div class="form-group">
                                     <label class="form-label" for="voieAdministration">Voie d'administration</label>
                                     <div class="form-control-wrap">
-                                        <input type="text" wicket:id="voieAdministration" id="voieAdministration" class="form-control" placeholder="">
+                                        <select wicket:id="voieAdministration" class="form-select js-select2">
+                                            <option value="default_option">Choisir</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div><!-- .col -->
@@ -177,7 +239,57 @@
             </div><!-- .modal -->
         </div><!-- .card -->
     </div><!-- .nk-block -->
+    <script type="text/javascript">
+        var currentIndex = -1;
 
+        // Définit les réactions des composants quand
+        // l'utilisateur défile avec la flèche du bas et
+        // du haut dans la liste des suggestions de la forme galénique
+        function handleKeyDown(event) {
+            var items = document.querySelectorAll('.auto-complete-dropdown-item');
+            if (event.key === 'ArrowDown') {
+                currentIndex = (currentIndex + 1) % items.length;
+                highlightCurrentItem();
+            } else if (event.key === 'ArrowUp') {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                highlightCurrentItem();
+            } else if (event.key === 'Enter') {
+                if (currentIndex >= 0) {
+                    items[currentIndex].click();
+                    event.preventDefault();
+                }
+            }
+        }
+
+        function highlightCurrentItem() {
+            var items = document.querySelectorAll('.auto-complete-dropdown-item');
+            items.forEach(function(item, index) {
+                if (index === currentIndex) {
+                    item.style.backgroundColor = '#d3d3d3';
+                } else {
+                    item.style.backgroundColor = '#ffffff';
+                }
+            });
+        }
+
+        function validateAndNormalizeDosage() {
+            var dosageInput = document.getElementById("dosageInput")
+            var dosage = dosageInput.value.trim()
+
+            // Vérifier que le format du dosage correspond à '500 mg' ou '1.5 g' par exemple
+            var dosagePattern = /^(\d+(\.\d+)?)\s*(mg|g|ml|l|mcg|IU)$/i
+            var match = dosage.match(dosagePattern)
+
+            if (match) {
+                var normalizedDosage = match[1] + " " + match[3].toLowerCase()
+                dosageInput.value = normalizedDosage
+                return true
+            } else {
+                alert("Le format du dosage est invalide. Veuillez entrer une valeur comme '500 mg' ou '1.5 g' par exemple")
+                return false
+            }
+        }
+    </script>
 </wicket:extend>
 </body>
 </html>

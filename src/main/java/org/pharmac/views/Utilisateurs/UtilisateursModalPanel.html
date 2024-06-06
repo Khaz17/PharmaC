@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+    <div class="modal fade" tabindex="-1" id="modalDefault">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Utilisateurs</h5>
+                    <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <em class="icon ni ni-cross"></em>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-sm table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prénom</th>
+                            <th scope="col"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr wicket:id="utilisateurs-list">
+                            <th wicket:id="id">1</th>
+                            <td wicket:id="username">Mark</td>
+                            <td wicket:id="nomU">Otto</td>
+                            <td wicket:id="prenomU">@mdo</td>
+                            <td><a href="#" wicket:id="select-user" class="select-close">Choisir</a></td>
+                            <!--                <td wicket:id="c"></td>-->
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    <script>-->
+    <!--        document.querySelector('.modal-body').addEventListener('click', function() {-->
+    <!--            document.getElementById('modalDefault').style.display = 'none';-->
+    <!--        });-->
+    <!--    </script>-->
+    <script>
+        $('.select-close').click(function() {
+            // Fermez le modal
+            $('#modalDefault').modal('hide');
+        });
+    </script>
+</wicket:panel>
+</body>
+</html>

@@ -13,8 +13,11 @@ import org.apache.wicket.util.resource.IResourceStream;
 import org.apache.wicket.util.string.StringValue;
 import org.apache.wicket.util.time.Duration;
 import org.pharmac.models.DetailVente;
+import org.pharmac.models.Utilisateur;
 import org.pharmac.models.Vente;
 import org.pharmac.services.DetailVenteService;
+import org.pharmac.services.PharmacySettingsService;
+import org.pharmac.services.UtilisateurService;
 import org.pharmac.services.VenteService;
 import org.pharmac.views.components.BasePage;
 import org.wicketstuff.annotation.mount.MountPath;
@@ -26,7 +29,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
 
-@MountPath("invoice")
+@MountPath("vendeur/invoice")
 public class InvoicePage extends BasePage {
 
 	@SpringBean
@@ -34,6 +37,9 @@ public class InvoicePage extends BasePage {
 
 	@SpringBean
 	private DetailVenteService detailVenteService;
+
+	@SpringBean
+	private PharmacySettingsService pharmacySettingsService;
 
 	public InvoicePage(PageParameters parameters) {
 		StringValue idVente = parameters.get("idVente");
@@ -49,6 +55,10 @@ public class InvoicePage extends BasePage {
 
 			String nameToDisplay = vente.get().getNomClient() != null ? vente.get().getNomClient() : "N/A";
 			add(new Label("nomClient", nameToDisplay));
+
+			Utilisateur utilisateur = vente.get().getUtilisateur();
+			String userToDisplay = utilisateur != null ? utilisateur.getNomU() + " " + utilisateur.getPrenomU() : "N/A";
+			add(new Label("realiseePar", userToDisplay));
 //			add(new Label("remise", vente.get().getRemise()));
 			add(new Label("total", vente.get().getTotal()));
 //			add(new Label("sommeRendue", vente.get().getSommeRendue()));
@@ -61,7 +71,7 @@ public class InvoicePage extends BasePage {
 				protected void populateItem(ListItem<DetailVente> item) {
 					DetailVente detailVenteRow = item.getModelObject();
 					item.add(new Label("codeP", detailVenteRow.getProduit().getCodeP()));
-					item.add(new Label("nomProduit", detailVenteRow.getProduit().getNomCommercial()));
+					item.add(new Label("nomProduit", detailVenteRow.getProduit().getNomComplet()));
 					item.add(new Label("quantiteVendue", detailVenteRow.getQuantiteVendue()));
 					item.add(new Label("prixUnitaire", detailVenteRow.getPrixUnitaire()));
 					item.add(new Label("detailTotal", detailVenteRow.getQuantiteVendue() * detailVenteRow.getPrixUnitaire()));
@@ -76,8 +86,7 @@ public class InvoicePage extends BasePage {
 						@Override
 						public void write(OutputStream output) throws IOException {
 							try {
-
-								InvoicePDFPrinter invoicePrinter = new InvoicePDFPrinter(vente.get());
+								InvoicePDFPrinter invoicePrinter = new InvoicePDFPrinter(vente.get(), pharmacySettingsService, detailVenteService);
 								invoicePrinter.export(output);
 							} catch (Exception e) {
 								throw new RuntimeException(e);
@@ -92,12 +101,6 @@ public class InvoicePage extends BasePage {
 					getRequestCycle().scheduleRequestHandlerAfterCurrent(handler);
 				}
 			});
-//			add(new Button("print") {
-//				@Override
-//				public void onSubmit() {
-//
-//				}
-//			});
 			add(new Link<>("list-ventes") {
 				@Override
 				public void onClick() {

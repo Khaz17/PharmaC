@@ -15,6 +15,8 @@ import org.pharmac.models.Categorie;
 import org.pharmac.services.CategorieService;
 import org.pharmac.views.components.ConfirmDeletePage;
 import org.pharmac.views.components.BasePage;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.wicketstuff.annotation.mount.MountPath;
 
 import java.util.Collections;
@@ -28,6 +30,8 @@ public class CategoriesPage extends BasePage {
 	private Categorie categorie = new Categorie();
 
 	public CategoriesPage() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
 		LoadableDetachableModel loadableDetachableModel = new LoadableDetachableModel() {
 			@Override
 			protected Object load() {
@@ -44,12 +48,17 @@ public class CategoriesPage extends BasePage {
 				item.add(new Label("id", categorieRow.getNumCtg()));
 				item.add(new Label("libelle", categorieRow.getLibelleCtg()));
 				item.add(new Label("description", categorieRow.getDescriptionCtg()));
-				item.add(new Link<Categorie>("edit-ctg", item.getModel()) {
+				item.add(new Link<>("edit-ctg", item.getModel()) {
 					@Override
 					public void onClick() {
 						PageParameters parameters = new PageParameters();
 						parameters.add("categorieToEditId", categorieRow.getNumCtg());
 						setResponsePage(EditCategoriePage.class, parameters);
+					}
+
+					@Override
+					public boolean isVisible() {
+						return authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ADMIN"));
 					}
 				});
 				item.add(new Link<Void>("delete") {
@@ -59,6 +68,11 @@ public class CategoriesPage extends BasePage {
 						parameters.add("elementType", categorieRow.getClass().getSimpleName());
 						parameters.add("elementId", categorieRow.getNumCtg());
 						setResponsePage(ConfirmDeletePage.class, parameters);
+					}
+
+					@Override
+					public boolean isVisible() {
+						return authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ADMIN"));
 					}
 				});
 			}
@@ -71,7 +85,15 @@ public class CategoriesPage extends BasePage {
 				categorieService.createOrUpdateCategorie(categorie);
 				getModel().setObject(new Categorie());
 			}
+
+			@Override
+			public boolean isVisible() {
+				return authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ADMIN"));
+			}
 		};
+//		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//		form.setVisible(authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN")));
+
 
 		form.add(new RequiredTextField<>("libelleCtg"));
 		form.add(new TextField<>("descriptionCtg"));

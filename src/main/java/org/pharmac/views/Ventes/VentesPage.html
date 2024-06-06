@@ -87,7 +87,7 @@
                             </th>
                             <th class="tb-odr-amount">
                                 <span class="tb-odr-total">Montant</span>
-                                <!--                            <span class="tb-odr-status d-none d-md-inline-block">Status</span>-->
+                                <span class="tb-odr-status d-none d-md-inline-block">Réalisée par</span>
                             </th>
                             <th class="tb-odr-action">&nbsp;</th>
                         </tr>
@@ -99,13 +99,14 @@
                                 <span wicket:id="dateVente" class="tb-odr-date">23 Jan 2019, 10:45pm</span>
                             </td>
                             <td class="tb-odr-amount">
-                            <span class="tb-odr-total">
-                                <span wicket:id="total" class="amount">$2300.00</span><span class="tb-odr-date"> F CFA</span>
-                            </span>
-                                <!--                            <span class="tb-odr-status">-->
-                                <!--                                <span class="badge badge-dot bg-success">Complete</span>-->
-                                <!--                            </span>-->
+                                <span class="tb-odr-total">
+                                    <span wicket:id="total" class="amount">$2300.00</span><span class="tb-odr-date"> F CFA</span>
+                                </span>
+                                <span wicket:id="realiseePar" class="tb-lead"></span>
                             </td>
+<!--                            <td class="">-->
+<!--                                -->
+<!--                            </td>-->
                             <td class="tb-odr-action">
                                 <div class="tb-odr-btns d-none d-sm-inline">
                                     <a href="#" wicket:id="print" target="_blank" class="btn btn-icon btn-white btn-dim btn-sm btn-primary"><em class="icon ni ni-printer-fill"></em></a>

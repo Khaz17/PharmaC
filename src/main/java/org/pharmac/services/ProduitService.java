@@ -9,6 +9,7 @@ import org.pharmac.repository.StockRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -23,6 +24,12 @@ public class ProduitService {
 
 	public List<Produit> getProduits() {
 		return produitRepository.findAll();
+	}
+
+	public List<Produit> getProduitsDisponibles() {
+		List<Produit> availableProducts = getProduits();
+		availableProducts.removeIf(p -> getProduitStockTotal(p.getCodeP()) < 1);
+		return availableProducts;
 	}
 
 	public Optional<Produit> getProduit(Long id) {

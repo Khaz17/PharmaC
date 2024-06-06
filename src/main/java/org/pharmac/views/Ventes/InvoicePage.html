@@ -8,7 +8,7 @@
                 <h3 class="nk-block-title page-title">Vente <strong wicket:id="idVente" class="text-primary small">#746F5K2</strong></h3>
                 <div class="nk-block-des text-soft">
                     <ul class="list-inline">
-                        <li>Réalisée le <span wicket:id="dateVente" class="text-base"></span></li>
+                        <li>Réalisée le <span wicket:id="dateVente" class="text-base"></span> à <span wicket:id="heureVente"></span></li>
                     </ul>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="invoice-head">
                     <div class="invoice-contact">
-                        <span class="overline-title">Invoice To</span>
+                        <span class="overline-title">Reçu addressé à</span>
                         <div class="invoice-contact-info">
                             <h4 wicket:id="nomClient" class="title">Gregory Ander son</h4>
                             <!--                        <ul class="list-plain">-->
@@ -39,11 +39,17 @@
                             <!--                        </ul>-->
                         </div>
                     </div>
+                    <div class="invoice-contact">
+                        <span class="overline-title">Par</span>
+                        <div class="invoice-contact-info">
+                            <h4 wicket:id="realiseePar" class="title">Gregory Ander son</h4>
+                        </div>
+                    </div>
                     <div class="invoice-desc">
 <!--                        <h3 class="title">Reçu vente</h3>-->
                         <ul class="list-plain">
 <!--                            <li class="invoice-id"><span>Vente ID</span>:<span wicket:id="idVente">66K5W3</span></li>                            <li class="invoice-date"><span>Date</span>:<span wicket:id="dateVente">26 Jan, 2020</span></li>-->
-                            <li class="invoice-date"><span>ID vente</span>:<span wicket:id="idVente">26 Jan, 2020</span></li>
+                            <li class="invoice-date"><span>ID vente</span>:<strong wicket:id="idVente" class="text-primary small">#746F5K2</strong></li>
                             <li class="invoice-date"><span>Date</span>:<span wicket:id="dateVente">26 Jan, 2020</span></li>
                             <li class="invoice-date"><span>Heure</span>:<span wicket:id="heureVente">26 Jan, 2020</span></li>
                         </ul>

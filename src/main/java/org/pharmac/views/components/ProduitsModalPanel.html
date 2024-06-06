@@ -20,6 +20,7 @@
                             <th scope="col">DCI</th>
                             <th scope="col">Prix</th>
                             <th scope="col">Voie adm.</th>
+                            <th scope="col">Stock actuel</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -29,7 +30,8 @@
                             <td wicket:id="dci">Otto</td>
                             <td wicket:id="prixUnitaire">@mdo</td>
                             <td wicket:id="voieAdministration">rt</td>
-                            <td><a href="#" wicket:id="select-produit">Choisir</a></td>
+                            <td wicket:id="stockActuel"></td>
+                            <td><a href="#" wicket:id="select-produit" class="select-close">Choisir</a></td>
                             <!--                <td wicket:id="c"></td>-->
                         </tr>
                         </tbody>
@@ -43,6 +45,12 @@
 <!--            document.getElementById('modalDefault').style.display = 'none';-->
 <!--        });-->
 <!--    </script>-->
+    <script>
+        $('.select-close').click(function() {
+            // Fermez le modal
+            $('#modalDefault').modal('hide');
+        });
+    </script>
 </wicket:panel>
 </body>
 </html>
