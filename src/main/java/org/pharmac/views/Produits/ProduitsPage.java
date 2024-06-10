@@ -37,6 +37,20 @@ public class ProduitsPage extends BasePage {
 	public ProduitsPage() {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
+		add(new Link<Void>("ajout-produit") {
+			@Override
+			public void onClick() {
+				setResponsePage(AddOrEditProduitPage.class);
+			}
+
+			@Override
+			public boolean isVisible() {
+				return authentication != null && authentication.getAuthorities().stream().anyMatch(
+						a -> a.getAuthority().equals("ADMIN") ||
+						a.getAuthority().equals("GESTIONNAIRE_STOCK"));
+			}
+		});
+
 		LoadableDetachableModel loadableDetachableModel = new LoadableDetachableModel() {
 			@Override
 			protected Object load() {
@@ -59,15 +73,6 @@ public class ProduitsPage extends BasePage {
 
 				int stockTotal = produitService.getProduitStockTotal(produitRow.getCodeP());
 				item.add(new Label("stockTotal", stockTotal));
-//				String stockStatus = "";
-//				if (stockTotal <= 25) {
-//					stockStatus = "Bas";
-//				} else if (stockTotal < 65) {
-//					stockStatus = "Moyen";
-//				} else {
-//					stockStatus = "Bon";
-//				}
-//				add(new Label("stockStatus", stockStatus));
 
 				item.add(new Link<>("display-produit", item.getModel()) {
 					@Override
@@ -109,14 +114,9 @@ public class ProduitsPage extends BasePage {
 					}
 				});
 
-//				item.add(new Link<>("edit-stk", item.getModel()) {
-//					@Override
-//					public void onClick() {
-//
-//					}
-//				});
 			}
 		};
+		listView.setOutputMarkupId(true);
 		add(listView);
 	}
 

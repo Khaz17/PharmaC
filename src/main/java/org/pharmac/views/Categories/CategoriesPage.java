@@ -32,6 +32,19 @@ public class CategoriesPage extends BasePage {
 	public CategoriesPage() {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
+		add(new Link<Void>("ajout-categorie") {
+			@Override
+			public void onClick() {
+			}
+
+			@Override
+			public boolean isVisible() {
+				return authentication != null && authentication.getAuthorities().stream().anyMatch(
+						a -> a.getAuthority().equals("ADMIN") ||
+						a.getAuthority().equals("GESTIONNAIRE_STOCK"));
+			}
+		});
+
 		LoadableDetachableModel loadableDetachableModel = new LoadableDetachableModel() {
 			@Override
 			protected Object load() {

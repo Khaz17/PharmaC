@@ -6,7 +6,7 @@
     <div class="nk-block-head nk-block-head-sm">
         <div class="nk-block-between">
             <div class="nk-block-head-content">
-                <h3 class="nk-block-title page-title fw-normal">Détails du produit</h3>
+                <h3 class="nk-block-title page-title fw-normal" wicket:id="full-name">Détails du produit</h3>
 <!--                <div class="nk-block-des text-soft">-->
 <!--                    <p>Sélectionnez un produit et ajouter de nouveaux stocks</p>-->
 <!--                </div>-->
@@ -17,7 +17,7 @@
 <!--                <a href="#" class="btn btn-outline-light bg-white d-none d-sm-inline-flex"><em class="icon ni ni-arrow-left"></em><span>Back</span></a>-->
 <!--                <a href="#" class="btn btn-icon btn-outline-light bg-white d-inline-flex d-sm-none"><em class="icon ni ni-arrow-left"></em></a>-->
                 <div class="dropdown">
-                    <a href="#" class="btn btn-primary" data-bs-toggle="dropdown"><span>Actions</span><em class="icon ni ni-chevron-down"></em></a>
+                    <a href="#" wicket:id="actions-produit" class="btn btn-primary" data-bs-toggle="dropdown"><span>Actions</span><em class="icon ni ni-chevron-down"></em></a>
                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-auto mt-1">
                         <ul class="link-list-plain">
                             <li><a wicket:id="edit-produit" href="#">Modifier</a></li>
@@ -44,7 +44,7 @@
                     <div class="card-inner">
                         <div class="nk-block">
                             <div class="nk-block-head nk-block-head-sm nk-block-between">
-                                <h5 wicket:id="titre" class="title">Informations du produit</h5>
+                                <h5 class="title">Informations du produit</h5>
                             </div><!-- .nk-block-head -->
                             <div class="row gy-5">
                                 <div class="col-md-3 col-lg-2 col-6">
@@ -95,12 +95,6 @@
                                         <span wicket:id="categorie">Tablet</span>
                                     </div>
                                 </div>
-<!--                                <div class="col-md-3 col-lg-2  col-6">-->
-<!--                                    <div class="profile-stats">-->
-<!--                                        <span class="profile-ud-label">Fournisseurs</span>-->
-<!--                                        <span wicket:id="fournisseurs">Healthcare</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
                                 <div class="col-md-3 col-lg-2 col-6">
                                     <div class="profile-stats">
                                         <span class="profile-ud-label">Description</span>
@@ -108,45 +102,61 @@
                                     </div>
                                 </div>
                             </div>
-<!--                            <div class="row gy-5">-->
-<!--                                <div class="col-md-3 col-lg-2 col-6">-->
-<!--                                    <div class="profile-stats">-->
-<!--                                        <span class="profile-ud-label">Popularity</span>-->
-<!--                                        <div>-->
-<!--                                            <em class="icon ni ni-star-fill text-warning"></em>-->
-<!--                                            <em class="icon ni ni-star-fill text-warning"></em>-->
-<!--                                            <em class="icon ni ni-star-fill text-warning"></em>-->
-<!--                                            <em class="icon ni ni-star-fill text-warning"></em>-->
-<!--                                            <em class="icon ni ni-star-fill text-warning"></em>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
                         </div><!-- .nk-block -->
-                        <div class="nk-divider divider md"></div>
+<!--                        <div class="nk-divider divider md"></div>-->
+
+<!--                        <div class="nk-divider divider md"></div>-->
+                    </div><!-- .card-inner -->
+                </div><!-- .card-content -->
+            </div><!-- .card-aside-wrap -->
+        </div><!-- .card -->
+
+        <div class="card card-bordered">
+            <div class="card-aside-wrap">
+                <div class="card-content">
+                    <div class="card-inner">
                         <div class="nk-block">
                             <div class="nk-block-head nk-block-head-sm nk-block-between">
                                 <h5 class="title">Stock</h5>
                             </div><!-- .nk-block-head -->
                             <div class="row gy-5">
-<!--                                <div class="col-md-3 col-sm-4">-->
-<!--                                    <div class="profile-stats">-->
-<!--                                        <span class="profile-ud-label">Starting Stock</span>-->
-<!--                                        <span class="amount">230box</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="col-md-3 col-sm-4">-->
-<!--                                    <div class="profile-stats">-->
-<!--                                        <span class="profile-ud-label">Current Stock</span>-->
-<!--                                        <span class="amount">180box</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="col-md-3 col-sm-4">-->
-<!--                                    <div class="profile-stats">-->
-<!--                                        <span class="profile-ud-label">Stock Status</span>-->
-<!--                                        <span class="badge bg-primary">Available</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
+                                <!--                                <div class="col-md-3 col-sm-4">-->
+                                <!--                                    <div class="profile-stats">-->
+                                <!--                                        <span class="profile-ud-label">Starting Stock</span>-->
+                                <!--                                        <span class="amount">230box</span>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+                                <!--                                <div class="col-md-3 col-sm-4">-->
+                                <!--                                    <div class="profile-stats">-->
+                                <!--                                        <span class="profile-ud-label">Current Stock</span>-->
+                                <!--                                        <span class="amount">180box</span>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+                                <!--                                <div class="col-md-3 col-sm-4">-->
+                                <!--                                    <div class="profile-stats">-->
+                                <!--                                        <span class="profile-ud-label">Stock Status</span>-->
+                                <!--                                        <span class="badge bg-primary">Available</span>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+
+                                <div class="example-alert" wicket:id="stockAlertContainer">
+                                    <div class="alert alert-danger alert-icon">
+                                        <em class="icon ni ni-cross-circle"></em> <strong wicket:id="empty-stock">Update failed</strong>
+                                    </div>
+                                </div>
+
+                                <div class="example-alert" wicket:id="closeDateAlertContainer">
+                                    <div class="alert alert-warning alert-icon">
+                                        <em class="icon ni ni-alert-circle"></em><strong wicket:id="close-date">already expired</strong>
+                                    </div>
+                                </div>
+
+                                <div class="example-alert" wicket:id="passedDateAlertContainer">
+                                    <div class="alert alert-danger alert-icon">
+                                        <em class="icon ni ni-cross-circle"></em> <strong wicket:id="passed-date">Update failed</strong>
+                                    </div>
+                                </div>
+
                                 <table class="table table-sm">
                                     <thead>
                                     <tr>
@@ -168,18 +178,26 @@
                                     </tbody>
                                 </table>
                             </div>
-<!--                            <div class="row gy-5">-->
-<!--                                <div class="col-lg-4 col-8">-->
-<!--                                    <div class="profile-stats">-->
-<!--                                        <span class="profile-ud-label">Remaining</span>-->
-<!--                                        <div class="progress progress-lg">-->
-<!--                                            <div class="progress-bar progress-bar-striped progress-bar-animated" data-progress="75">75%</div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
+                            <!--                            <div class="row gy-5">-->
+                            <!--                                <div class="col-lg-4 col-8">-->
+                            <!--                                    <div class="profile-stats">-->
+                            <!--                                        <span class="profile-ud-label">Remaining</span>-->
+                            <!--                                        <div class="progress progress-lg">-->
+                            <!--                                            <div class="progress-bar progress-bar-striped progress-bar-animated" data-progress="75">75%</div>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
                         </div><!-- .nk-block -->
-                        <div class="nk-divider divider md"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-bordered">
+            <div class="card-aside-wrap">
+                <div class="card-content">
+                    <div class="card-inner">
                         <div class="nk-block">
                             <div class="nk-block-head nk-block-head-sm nk-block-between">
                                 <h5 class="title">Valeur</h5>
@@ -191,24 +209,24 @@
                                         <span wicket:id="prixUnitaire" class="amount">50.00USD</span> F CFA
                                     </div>
                                 </div>
-<!--                                <div class="col-md-3 col-sm-4">-->
-<!--                                    <div class="profile-stats">-->
-<!--                                        <span class="profile-ud-label">Seeling price</span>-->
-<!--                                        <span class="amount">60.00USD </span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="col-md-3 col-sm-4">-->
-<!--                                    <div class="profile-stats">-->
-<!--                                        <span class="profile-ud-label">Wholesale Price</span>-->
-<!--                                        <span class="amount">55.00USD</span>-->
-<!--                                    </div>-->
-<!--                                </div>-->
+                                <!--                                <div class="col-md-3 col-sm-4">-->
+                                <!--                                    <div class="profile-stats">-->
+                                <!--                                        <span class="profile-ud-label">Seeling price</span>-->
+                                <!--                                        <span class="amount">60.00USD </span>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+                                <!--                                <div class="col-md-3 col-sm-4">-->
+                                <!--                                    <div class="profile-stats">-->
+                                <!--                                        <span class="profile-ud-label">Wholesale Price</span>-->
+                                <!--                                        <span class="amount">55.00USD</span>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
                             </div>
                         </div><!-- .nk-block -->
-                    </div><!-- .card-inner -->
-                </div><!-- .card-content -->
-            </div><!-- .card-aside-wrap -->
-        </div><!-- .card -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div><!-- .nk-block -->
 </wicket:extend>
 

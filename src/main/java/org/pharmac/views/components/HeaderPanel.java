@@ -58,6 +58,11 @@ public class HeaderPanel extends Panel {
 				public void onClick() {
 					setResponsePage(SettingsPage.class);
 				}
+
+				@Override
+				public boolean isVisible() {
+					return authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ADMIN"));
+				}
 			});
 		}
 

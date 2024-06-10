@@ -10,6 +10,7 @@ import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -100,10 +101,14 @@ public class UtilisateurService {
 	}
 
 	public void affecterDroits(Utilisateur utilisateur, List<Role> roles) {
-		for (Role r : utilisateur.getRoles()) {
-			utilisateur.getRoles().remove(r);
+		if (roles.size() >= 1) {
+			for (Role r : utilisateur.getRoles()) {
+				utilisateur.getRoles().remove(r);
+			}
+			utilisateur.setRoles(roles);
+		} else {
+			utilisateur.setRoles(new ArrayList<>());
 		}
-		utilisateur.setRoles(roles);
 		utilisateurRepository.save(utilisateur);
 	}
 

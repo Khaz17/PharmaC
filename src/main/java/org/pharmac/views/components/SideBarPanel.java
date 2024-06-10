@@ -3,6 +3,7 @@ package org.pharmac.views.components;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.model.LoadableDetachableModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.pharmac.models.PharmacySettings;
 import org.pharmac.services.PharmacySettingsService;
@@ -32,8 +33,15 @@ public class SideBarPanel extends Panel {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
 		PharmacySettings pharmacySettings = pharmacySettingsService.getPharmacySettings().get();
-		String pharmacyNameToDisplay = "Pharmacie " + pharmacySettings.getNomPharma();
-		add(new Label("pharmacyName", pharmacyNameToDisplay));
+
+		LoadableDetachableModel<String> sidebarModel = new LoadableDetachableModel<>() {
+			@Override
+			protected String load() {
+				return "Pharmacie " + pharmacySettingsService.getPharmacySettings().get().getNomPharma();
+			}
+		};
+//		String pharmacyNameToDisplay = "Pharmacie " + pharmacySettings.getNomPharma();
+		add(new Label("pharmacyName", sidebarModel).setOutputMarkupId(true));
 //		add(new Label("pharmacyAddress", pharmacySettings.getAdressePharma()));
 //		add(new Label("pharmacyTel", pharmacySettings.getTelPharma()));
 
@@ -104,6 +112,19 @@ public class SideBarPanel extends Panel {
 			}
 		});
 
+		add(new Link<Void>("ventes-group") {
+			@Override
+			public void onClick() {
+
+			}
+
+			@Override
+			public boolean isVisible() {
+				return authentication != null && authentication.getAuthorities().stream().anyMatch(
+						a -> a.getAuthority().equals("ADMIN") ||
+						a.getAuthority().equals("VENDEUR"));
+			}
+		});
 		add(new Link<Void>("newvente-page") {
 			@Override
 			public void onClick() {
@@ -128,6 +149,18 @@ public class SideBarPanel extends Panel {
 				return authentication != null && authentication.getAuthorities().stream().anyMatch(
 						a -> a.getAuthority().equals("ADMIN") ||
 								a.getAuthority().equals("VENDEUR"));
+			}
+		});
+
+		add(new Link<Void>("utilisateurs-group") {
+			@Override
+			public void onClick() {
+
+			}
+
+			@Override
+			public boolean isVisible() {
+				return authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ADMIN"));
 			}
 		});
 
@@ -175,9 +208,7 @@ public class SideBarPanel extends Panel {
 
 			@Override
 			public boolean isVisible() {
-				return authentication != null && authentication.getAuthorities().stream().anyMatch(a ->
-						a.getAuthority().equals("GESTIONNAIRE") ||
-						a.getAuthority().equals("ADMIN"));
+				return authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ADMIN"));
 			}
 		});
 	}

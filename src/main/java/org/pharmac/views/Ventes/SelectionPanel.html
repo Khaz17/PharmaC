@@ -2,7 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
 <body>
 <wicket:panel>
-    <div class="nk-tb-list">
+
+    <form wicket:id="searchForm">
+<!--        <input type="text" wicket:id="searchQuery" placeholder="Search products..."/>-->
+<!--        <button type="submit" wicket:id="searchButton">Search</button>-->
+        <div class="col-12">
+            <div class="form-control-wrap">
+                <div class="input-group">
+                    <div class="form-icon form-icon-left">
+                        <em class="icon ni ni-search"></em>
+                    </div>
+                    <input type="text" wicket:id="searchQuery" class="form-control" placeholder="Nom, DCI ou même catégorie">
+                    <div class="input-group-append">
+                        <button type="submit" wicket:id="searchButton" class="btn btn-outline-primary btn-dim">Rechercher</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <br>
+    <div class="nk-tb-list" wicket:id="container">
         <div class="nk-tb-item nk-tb-head">
 <!--            <div class="nk-tb-col nk-tb-col-check">-->
 <!--            </div>-->
@@ -53,7 +72,35 @@
         </div><!-- .nk-tb-item -->
 
     </div><!-- .nk-tb-list -->
-    <br><br>
+    <br>
+
+    <div wicket:id="pagingNavigator">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><span class="page-link"><em class="icon ni ni-more-h"></em></span></li>
+            <li class="page-item"><a class="page-link" href="#">6</a></li>
+            <li class="page-item"><a class="page-link" href="#">7</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </div>
+<!--    <div wicket:id="pagingNavigator">-->
+<!--        <nav>-->
+<!--            <ul class="pagination" wicket:id="pagingNavigator">-->
+<!--                <li class="page-item">-->
+<!--                    <a class="page-link" href="#" aria-label="Prev"><span aria-hidden="true">&laquo;</span></a>-->
+<!--                </li>-->
+<!--                <li class="page-item"><a class="page-link" href="#">1</a></li>-->
+<!--                <li class="page-item"><a class="page-link" href="#">2</a></li>-->
+<!--                <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+<!--                <li class="page-item">-->
+<!--                    <a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </div>-->
+
     <a wicket:id="send-selection" href="#" class="btn btn-wider btn-primary"><span>Continuer</span><em class="icon ni ni-arrow-right"></em></a>
 </wicket:panel>
 </body>

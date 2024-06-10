@@ -56,8 +56,8 @@
 <!--                                </div>-->
 <!--                            </li>-->
                             <li class="nk-block-tools-opt">
-                                <a href="/gestionnaire/info-produit" class="btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
-                                <a href="/gestionnaire/info-produit" class="btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span>Ajouter produit</span></a>
+                                <a href="#" class="btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
+                                <a href="#" wicket:id="ajout-produit" class="btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span>Ajouter produit</span></a>
                             </li>
                         </ul>
                     </div>
@@ -68,7 +68,7 @@
     <div class="nk-block">
         <div class="card card-bordered card-preview">
             <div class="card-inner">
-                <table class="datatable-init nk-tb-list nk-tb-ulist" data-auto-responsive="false">
+                <table class="datatable-init table tb1">
                     <thead>
                     <tr class="nk-tb-item nk-tb-head">
                         <th class="nk-tb-col nk-tb-col-check">
@@ -99,15 +99,6 @@
                             </div>
                         </td>
                         <td class="nk-tb-col">
-<!--                            <div class="user-card">-->
-<!--                                <div class="user-avatar bg-dim-primary d-none d-sm-flex">-->
-<!--                                    <span>AB</span>-->
-<!--                                </div>-->
-<!--                                <div class="user-info">-->
-<!--                                    <span class="tb-lead">Abu Bin Ishtiyak <span class="dot dot-success d-md-none ms-1"></span></span>-->
-<!--                                    <span>info@softnio.com</span>-->
-<!--                                </div>-->
-<!--                            </div>-->
                             <a href="#">
                                 <span class="tb-product">
                                     <span class="title" wicket:id="nomCommercial">Oxidon</span>
@@ -121,7 +112,7 @@
                             <span wicket:id="voieAdministration">@mdo</span>
                         </td>
                         <td class="nk-tb-col tb-col-mb">
-                            <span wicket:id="prixUnitaire" >Otto</span>
+                            <span wicket:id="prixUnitaire">Otto</span>
                         </td>
                         <td class="nk-tb-col tb-col-md">
                             <span wicket:id="categorie">Tablet</span>
@@ -129,18 +120,6 @@
                         <td class="nk-tb-col tb-col-md">
                             <span wicket:id="stockTotal">0</span>
                         </td>
-<!--                        <td class="nk-tb-col tb-col-lg" data-order="Email Verified - Kyc Unverified">-->
-<!--                            <ul class="list-status">-->
-<!--                                <li><em class="icon text-success ni ni-check-circle"></em> <span>Email</span></li>-->
-<!--                                <li><em class="icon ni ni-alert-circle"></em> <span>KYC</span></li>-->
-<!--                            </ul>-->
-<!--                        </td>-->
-<!--                        <td class="nk-tb-col tb-col-lg">-->
-<!--                            <span>05 Oct 2019</span>-->
-<!--                        </td>-->
-<!--                        <td class="nk-tb-col tb-col-md">-->
-<!--                            <span class="tb-status text-success">Active</span>-->
-<!--                        </td>-->
                         <td class="nk-tb-col nk-tb-col-tools">
                             <ul class="nk-tb-actions gx-1 my-n1">
                                 <li class="me-n1">
@@ -245,7 +224,10 @@
         </div><!-- .nk-block -->
     </div>
 
-<!--    <script src="/js/libs/datatable-btns.js?ver=3.2.2"></script>-->
+
+
+
+    <!--    <script src="/js/libs/datatable-btns.js?ver=3.2.2"></script>-->
 
 </wicket:extend>
 </body>

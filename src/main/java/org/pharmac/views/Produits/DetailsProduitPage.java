@@ -1,5 +1,6 @@
 package org.pharmac.views.Produits;
 
+import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
@@ -22,7 +23,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.wicketstuff.annotation.mount.MountPath;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -50,7 +56,22 @@ public class DetailsProduitPage extends BasePage {
 //				List<Fournisseur> fournisseurs = fournisseurService.getProduitFournisseurs(produit.get().getCodeP());
 				List<Stock> stocks = stockService.getProduitStocks(produit.get().getCodeP());
 
-				add(new Label("titre", "Détails du produit " + produit.get().getNomComplet()));
+
+				add(new Label("full-name", produit.get().getNomComplet()));
+				add(new Link<Void>("actions-produit") {
+					@Override
+					public void onClick() {
+					}
+
+					@Override
+					public boolean isVisible() {
+						return authentication != null && authentication.getAuthorities().stream().anyMatch(
+								a -> a.getAuthority().equals("ADMIN") ||
+								a.getAuthority().equals("GESTIONNAIRE_STOCK"));
+					}
+				});
+
+//				add(new Label("titre", "Détails du produit " + produit.get().getNomComplet()));
 				add(new Label("nomCommercial", produit.get().getNomCommercial()));
 				add(new Label("dci", produit.get().getDci()));
 				add(new Label("formeGalenique", produit.get().getFormeGalenique()));
@@ -107,7 +128,7 @@ public class DetailsProduitPage extends BasePage {
 					}
 				});
 
-				ListView<Stock> listView = new ListView<>("stocks-list", stocks) {
+				ListView<Stock> stockListView = new ListView<>("stocks-list", stocks) {
 					@Override
 					protected void populateItem(ListItem<Stock> item) {
 						Stock stock = item.getModelObject();
@@ -134,7 +155,56 @@ public class DetailsProduitPage extends BasePage {
 						});
 					}
 				};
-				add(listView);
+				add(stockListView);
+
+				WebMarkupContainer stockAlertContainer = new WebMarkupContainer("stockAlertContainer");
+				Label emptyStockLabel = new Label("empty-stock", "Vous ne possédez aucune boîte de ce stock, ce qui le rend donc indisponible à la vente.");
+				stockAlertContainer.add(emptyStockLabel);
+				stockAlertContainer.setVisible(produitService.getProduitStockTotal(produit.get().getCodeP()) <= 0);
+				add(stockAlertContainer);
+
+				LocalDate now = LocalDate.now();
+				LocalDate datePeremption = stocks.size() != 0 ? stocks.get(0).getDatePeremption().toInstant().atZone(ZoneId.systemDefault()).toLocalDate() : LocalDate.now();
+				Period tempsRestant = Period.between(now, datePeremption);
+//				System.out.println(tempsRestant.getDays());
+//				System.out.println(tempsRestant.getMonths());
+//				System.out.println(tempsRestant.getYears());
+
+				SimpleDateFormat formatter = new SimpleDateFormat("MM/yyyy");
+				String alertDateLabel = stocks.size() != 0 ? formatter.format(stocks.get(0).getDatePeremption()) : formatter.format(new Date());
+				WebMarkupContainer closeDateAlertContainer = new WebMarkupContainer("closeDateAlertContainer");
+				Label closeDateLabel = new Label("close-date", "La date de péremption la plus proche de vos stocks est " + alertDateLabel + ", dans " +ChronoUnit.DAYS.between(now, datePeremption) + " jours.");
+				closeDateAlertContainer.setVisible(false);
+				closeDateAlertContainer.add(closeDateLabel);
+				add(closeDateAlertContainer);
+
+				WebMarkupContainer passedDateAlertContainer = new WebMarkupContainer("passedDateAlertContainer");
+				Label passedDateLabel = new Label("passed-date", "La date de péremption la plus proche est dépassée de " + ChronoUnit.DAYS.between(datePeremption, now) + " jours.");
+				passedDateAlertContainer.setVisible(false);
+				passedDateAlertContainer.add(passedDateLabel);
+				add(passedDateAlertContainer);
+
+				if (tempsRestant.getYears() < 1) {
+					closeDateAlertContainer.setVisible(true);
+				}
+
+				if (tempsRestant.getDays() < 0) {
+					closeDateAlertContainer.setVisible(false);
+					passedDateAlertContainer.setVisible(true);
+				}
+
+				if (stocks.size() == 0) {
+					stockListView.setVisible(false);
+					closeDateAlertContainer.setVisible(false);
+				}
+
+
+//				if (tempsRestant.getMonths() < 13) {
+//					Label closeDate = new Label("close-date", "La date de péremption la plus proche de vos stocks est le " + datePeremption + ", dans " + tempsRestant.getDays() + ".");
+//					closeDate.setVisible(!tempsRestant.isZero());
+//					add(closeDate);
+//				}
+
 
 			}
 		}

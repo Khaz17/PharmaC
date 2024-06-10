@@ -28,9 +28,10 @@ public class ProduitService {
 
 	public List<Produit> getProduitsDisponibles() {
 		List<Produit> availableProducts = getProduits();
-		availableProducts.removeIf(p -> getProduitStockTotal(p.getCodeP()) < 1);
+		availableProducts.removeIf(p -> getProduitStockTotal(p.getCodeP()) == 0);
 		return availableProducts;
 	}
+
 
 	public Optional<Produit> getProduit(Long id) {
 		return produitRepository.findById(id);
@@ -62,6 +63,17 @@ public class ProduitService {
 			}
 		}
 		return stockTotal;
+	}
+
+	public List<Produit> searchProduits(String query) {
+		return produitRepository.searchProduits(query);
+	}
+
+
+	public List<Produit> searchDisponiblesProduits(String query) {
+		List<Produit> produits = produitRepository.searchProduits(query);
+		produits.removeIf(produit -> getProduitStockTotal(produit.getCodeP()) == 0);
+		return produits;
 	}
 
 	public Produit createOrUpdateProduit(Produit produit) {
