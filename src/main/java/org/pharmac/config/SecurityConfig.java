@@ -3,6 +3,7 @@ package org.pharmac.config;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.pharmac.config.CustomUserDetailsService;
 import org.pharmac.models.PharmacySettings;
+import org.pharmac.models.Utilisateur;
 import org.pharmac.repository.GestionUtilisateurRepository;
 import org.pharmac.repository.PharmacySettingsRepository;
 import org.pharmac.repository.RoleRepository;
@@ -16,6 +17,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
+
+import java.util.Arrays;
+import java.util.Collections;
 
 @Configuration
 @EnableWebSecurity
@@ -86,12 +90,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Bean
 	CommandLineRunner initRolesAndUsers(GestionUtilisateurRepository userRepo, RoleRepository roleRepo, PasswordEncoder passwordEncoder, PharmacySettingsRepository pharmaRepo) {
 		return args -> {
-//			Role roleAdmin = new Role("ADMIN", "Administrateur");
-//			roleRepo.save(roleAdmin);
-//			Role roleGesStk = new Role("GESTIONNAIRE_STOCK","Gestionnaire des stocks");
-//			roleRepo.save(roleGesStk);
-//			Role roleVen = new Role("VENDEUR","Vendeur");
-//			roleRepo.save(roleVen);
+			Role roleAdmin = new Role("ADMIN", "Administrateur", "");
+			roleRepo.save(roleAdmin);
+			Role roleGesStk = new Role("GESTIONNAIRE_STOCK","Gestionnaire des stocks", "");
+			roleRepo.save(roleGesStk);
+			Role roleVen = new Role("VENDEUR","Vendeur", "");
+			roleRepo.save(roleVen);
 //			userRepo.save(new Utilisateur(
 //					"KEADMINPHARMA",
 //					"keadmin",
@@ -103,8 +107,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //					"Attiegou, Lomé",
 //					true,
 //					roleAdmin, roleGesStk, roleVen));
-//			userRepo.save(new Utilisateur(
-//					"PHARMADOR",
+
+//			Utilisateur adminUser = new Utilisateur(
+//					"keadmin",
+//					"Eddie",
+//					"Kapou",
+//					passwordEncoder.encode("password"),
+//					"92800155",
+//					"eddiekapou@gmail.com",
+//					"Attiegou, Lomé",
+//					true);
+//			adminUser.setRoles(Arrays.asList(roleAdmin, roleGesStk, roleVen));
+//			userRepo.save(adminUser);
+//
+//			Utilisateur vendorUser = new Utilisateur(
 //					"uservendor",
 //					"Jean",
 //					"DAW",
@@ -112,10 +128,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //					"90000000",
 //					"jeandaw2024@gmail.com",
 //					"Wuiti, Lomé",
-//					true,
-//					roleVen));
-//			userRepo.save(new Utilisateur(
-//					"PHARMASTOCK",
+//					true);
+//			vendorUser.setRoles(Collections.singletonList(roleVen));
+//			userRepo.save(vendorUser);
+//
+//			Utilisateur managerUser = new Utilisateur(
 //					"managstk",
 //					"Kossi",
 //					"EFI",
@@ -123,8 +140,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //					"90005050",
 //					"esstickkof@gmail.com",
 //					"Wuiti, Lomé",
-//					true,
-//					roleGesStk));
+//					true);
+//			managerUser.setRoles(Collections.singletonList(roleGesStk));
+//			userRepo.save(managerUser);
+//
 //			pharmaRepo.save(new PharmacySettings(
 //					"ABC",
 //					"Wuiti",

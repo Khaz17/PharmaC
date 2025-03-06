@@ -44,7 +44,7 @@ public class Utilisateur implements Serializable {
 	private List<Role> roles = new ArrayList<>();
 
 	@OneToMany(mappedBy = "utilisateur")
-	private List<Vente> ventes;
+	private List<Vente> ventes = new ArrayList<>();
 
 	@ManyToOne
 	@JoinColumn(name = "createur_id")
@@ -60,4 +60,7 @@ public class Utilisateur implements Serializable {
 		this.adresseU = adresseU;
 		this.actif = actif;
 	}
+
+//	public Utilisateur(String keadminpharma, String username, String prenomU, String nomU, String password, String telU, String emailU, String adresseU, boolean actif) {
+//	}
 }
